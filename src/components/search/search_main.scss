@@ -1,0 +1,39 @@
+
+
+.search_section{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    // background-color: rgba(0,0,0,0.1);
+    width: 100%;
+    max-height: 100%;    
+    z-index: 999;
+
+    .ss_wrapper{
+        padding: 40px;
+        background-color: white;
+        width: 35%;
+        max-height: 100%;
+        margin: 20px 0px;
+        box-shadow: 0px 0px 80px rgba(0,0,0,0.15);
+              
+
+
+        .ss_header{
+            display: flex;
+            justify-content: space-between;
+
+           
+        }
+        // .choosen_bricks{
+
+
+        // }
+        // .separator{
+
+        // }
+        // .variants{
+
+        // }
+    }
+}

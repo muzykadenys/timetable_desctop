@@ -1,0 +1,358 @@
+$g_1:#1c1c1e;
+$g_2: #2c2c2e;
+$g_3:#3a3a3c;
+$g_4: #48484a;
+$g_5:#636365;
+$g_6: #8f8e92;
+$g_7:#aeadb1;
+$g_8: #c8c7cb;
+$g_9:#d2d1d6;
+$g_1-0: #f3f2f7;
+$y_1:#ffe68a;
+$y_2:#ffeea9;
+$b_1:#35271c;
+$b_2:#4c3729;
+$b_3:#684f3e;
+$b_4:#e8ded4;
+$b_5:#f2ebe7;
+
+
+%sticker_paddings{
+    padding: 0px 15px;
+}
+%spacing_eraser{
+    padding: 0px;
+    margin: 0px;
+}
+%faded_sub{
+    opacity: 0.6;
+    background-color: $b_5;
+}
+// ===============================================================================================================
+.lesson_item{
+    background-color: $y_1;
+    margin: 10px;
+    width: 100%;
+    height: 110px;
+
+    clip-path: inset(0 round 5px);
+}
+//==================================================================================================================
+
+.layout_1{
+    background-color: $y_1;
+    margin: 10px;
+    width: 100%;
+    padding-bottom: 15px;
+    // height: 110px;
+    clip-path: inset(0 round 5px);
+
+
+    .lil_main{
+        @extend %sticker_paddings;
+        padding-top: 10px;
+
+
+        .lil_t_1{
+            @extend %spacing_eraser;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .lil_t_2{
+            @extend %spacing_eraser;
+            font-size: 10px;
+            font-weight: 500;
+        }
+
+        .lil_bot{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-top: 20px;
+
+                   
+            .lil_btn{
+                @extend %spacing_eraser;
+                background: none;
+                border: none;  
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                cursor: pointer;
+
+                .lil_btn_text{
+                    font-size: 10px;
+                    font-weight: 600;
+                    color: $b_2;
+                }
+                .lil_btn_line{
+                    border-bottom: 2px solid $b_3;
+                    width: 90%;
+                }
+            }
+            
+        }
+
+    }
+}
+
+// layout 2 --------------------------------------------------------------------------------------------------------
+.layout_2{
+    // background-color: $y_1;
+    margin: 10px;
+    width: 100%;
+    padding-bottom: 15px;
+    
+    clip-path: inset(0 round 5px);
+    // border: 1px solid $b_2;
+
+    section{
+        @extend %sticker_paddings;
+        padding-top: 10px;
+        min-height: 30px;
+        background-color: $y_1;
+
+        .lil_t_1{
+            @extend %spacing_eraser;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .lil_t_2{
+            @extend %spacing_eraser;
+            font-size: 10px;
+            font-weight: 500;
+        }
+
+        .lil_bot{
+            display: flex;
+            justify-content: flex-end;
+            // flex-direction: column-reverse;
+            margin-top: 5px;
+            
+            .lil_btn{
+                @extend %spacing_eraser;
+                background: none;
+                border: none;  
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                cursor: pointer;
+
+                .lil_btn_text{
+                    font-size: 10px;
+                    font-weight: 600;
+                    color: $b_2;
+                }
+                .lil_btn_line{
+                    border-bottom: 2px solid $b_3;
+                    width: 90%;
+                }
+            }
+            
+        }
+
+    }
+    .lil_main_1{
+        padding-bottom: 10px;
+    }
+    .lil_main_2{
+        height: 100%;
+        padding-top: 15px;
+        background-color: $b_5;
+    }
+    .lil_main_faded{
+        @extend %faded_sub;
+    }
+}
+
+
+// layout 3 --------------------------------------------------------------------------------------------------------
+.layout_3{
+    
+    margin: 10px;
+    width: 100%;
+    // background-color: red;
+    // height: 180px;
+    clip-path: inset(0 round 5px);
+    // border: 1px solid $b_2;
+
+    .lil_wrapper{
+        display: flex;
+        justify-content: space-between;
+
+        section{
+            @extend %sticker_paddings;
+            background-color: $y_1;
+            padding-top: 10px;
+            padding-bottom: 15px;
+            width: 37.5%;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+            .lil_t_1{
+                @extend %spacing_eraser;
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+            .lil_t_2{
+                @extend %spacing_eraser;
+                font-size: 10px;
+                font-weight: 500;
+            }
+    
+            .lil_bot{
+                display: flex;
+                justify-content: flex-end;
+                // flex-direction: column-reverse;
+                margin-top: 5px;
+                
+                .lil_btn{
+                    @extend %spacing_eraser;
+                    background: none;
+                    border: none;  
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    cursor: pointer;
+    
+                    .lil_btn_text{
+                        font-size: 10px;
+                        font-weight: 600;
+                        color: $b_2;
+                    }
+                    .lil_btn_line{
+                        border-bottom: 2px solid $b_3;
+                        width: 90%;
+                    }
+                }
+                
+            }
+    
+        }
+        .lil_main_faded{
+            @extend %faded_sub;
+        }
+    }
+}
+
+// 4 layout
+.layout_4{
+    // background-color: $y_1;
+    margin: 10px;
+    width: 100%;
+
+    // height: 180px;
+    clip-path: inset(0 round 5px);
+    // border: 1px solid $b_2;
+
+    .lil_w{
+        display: flex;
+        justify-content: space-between;
+        section{
+            @extend %sticker_paddings;
+            background-color: $y_1;
+            padding-top: 10px;
+            padding-bottom: 15px;
+            width: 37.5%;
+            
+
+            .lil_t_1{
+                @extend %spacing_eraser;
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+            .lil_t_2{
+                @extend %spacing_eraser;
+                font-size: 10px;
+                font-weight: 500;
+            }
+    
+            .lil_bot{
+                display: flex;
+                justify-content: flex-end;
+                // flex-direction: column-reverse;
+                margin-top: 5px;
+                
+                .lil_btn{
+                    @extend %spacing_eraser;
+                    background: none;
+                    border: none;  
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    cursor: pointer;
+    
+                    .lil_btn_text{
+                        font-size: 10px;
+                        font-weight: 600;
+                        color: $b_2;
+                    }
+                    .lil_btn_line{
+                        border-bottom: 2px solid $b_3;
+                        width: 90%;
+                    }
+                }
+                
+            }
+    
+        }
+        // .lil_main_2{
+        //     background-color: $b_5;
+        // }
+    }
+}
+
+.layout_4{
+    .lil_w{
+        .lil_main_faded{
+            @extend %faded_sub;
+        }
+        .lil_main_3{
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .lil_main_4{
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+}
+
+//header ------------------------------------------------------------------------------------------------------------
+// top bar of sticker
+.lil_top{
+    background-color: $y_2;
+    display: flex;
+    justify-content: space-between;
+    max-height: 30px;
+    @extend %sticker_paddings;
+    align-items: center;
+
+    .lil_time{
+
+        font-size: 10px;
+        font-weight: 500;
+        width: 33%;
+        white-space: nowrap;
+    }
+    .lil_type{
+        display: inline;
+        font-size: 10px;
+        font-weight: 600;
+        width: 33%;
+        text-align: center;
+        padding-left: -10px;
+    }
+    .lil_para{
+        width: 33%;
+        text-align: end;
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+}
+

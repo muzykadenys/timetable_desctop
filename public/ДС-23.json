@@ -1,0 +1,300 @@
+{
+    "group": [
+        [
+            {
+                "para": "1",
+                "time": "8:30-10:05",
+                "type": [
+                    "sub_1_full",
+                    "sub_2_full"
+                ],
+                "text": [
+                    {
+                        "title": "Живопис, рисунок, скульптура, частина 3",
+                        "teacher": "Лясковський О.Й., 337 Гол. н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/team/19%3alZt1FtBS2TdgrtjvhhtBUxqWu2ZHqN5KzKlvvx43xzs1%40thread.tacv2/conversations?groupId=2deb9692-16fa-4d97-884c-bb431238f35b&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    },
+                    {
+                        "title": "Живопис, рисунок, скульптура, частина 3",
+                        "teacher": "Сентимреі Ю.Г., 337 Гол. н.к., ",
+                        "lesson_is": ", Практична",
+                        "link": "https://teams.microsoft.com/l/team/19%3alZt1FtBS2TdgrtjvhhtBUxqWu2ZHqN5KzKlvvx43xzs1%40thread.tacv2/conversations?groupId=2deb9692-16fa-4d97-884c-bb431238f35b&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            },
+            {
+                "para": "2",
+                "time": "10:20-11:55",
+                "type": [
+                    "sub_1_full",
+                    "sub_2_full"
+                ],
+                "text": [
+                    {
+                        "title": "Живопис, рисунок, скульптура, частина 3",
+                        "teacher": "Лясковський О.Й., 337 Гол. н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/team/19%3alZt1FtBS2TdgrtjvhhtBUxqWu2ZHqN5KzKlvvx43xzs1%40thread.tacv2/conversations?groupId=2deb9692-16fa-4d97-884c-bb431238f35b&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    },
+                    {
+                        "title": "Живопис, рисунок, скульптура, частина 3",
+                        "teacher": "Сентимреі Ю.Г., 337 Гол. н.к., ",
+                        "lesson_is": ", Практична",
+                        "link": "https://teams.microsoft.com/l/team/19%3alZt1FtBS2TdgrtjvhhtBUxqWu2ZHqN5KzKlvvx43xzs1%40thread.tacv2/conversations?groupId=2deb9692-16fa-4d97-884c-bb431238f35b&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            },
+            {
+                "para": "3",
+                "time": "12:10-13:45",
+                "type": [
+                    "group_znam"
+                ],
+                "text": [
+                    {
+                        "title": "Історія мистецтва, архітектури і дизайну, частина 3",
+                        "teacher": "Казанцева Т.Є., Мотиль Р.Я., 105а Гол. н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/channel/19%3a9f55aae8b1b045e68d5931abe767b1e1%40thread.tacv2/%25D0%2586%25D1%2581%25D1%2582%25D0%25BE%25D1%2580%25D1%2596%25D1%258F%2520%25D0%259C%25D0%2590%25D0%2594%2520%25D0%2594%25D0%25A1-2?groupId=20d0cc66-4002-4024-8bc0-38a8ff3b7b4e&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            },
+            {
+                "para": "4",
+                "time": "14:15−15:50",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Фізичне виховання, частина 3",
+                        "teacher": "Козіброда Л.В., 21кор.вул.Самчука11",
+                        "lesson_is": " Практична",
+                        "link": "empty"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "para": "1",
+                "time": "8:30-10:05",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Історія мистецтва, архітектури і дизайну, частина 3",
+                        "teacher": "Казанцева Т.Є., Мотиль Р.Я., 304 Гол. н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://teams.microsoft.com/l/channel/19%3a9f55aae8b1b045e68d5931abe767b1e1%40thread.tacv2/%25D0%2586%25D1%2581%25D1%2582%25D0%25BE%25D1%2580%25D1%2596%25D1%258F%2520%25D0%259C%25D0%2590%25D0%2594%2520%25D0%2594%25D0%25A1-2?groupId=20d0cc66-4002-4024-8bc0-38a8ff3b7b4e&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            },
+            {
+                "para": "3",
+                "time": "12:10-13:45",
+                "type": [
+                    "group_chys",
+                    "group_znam"
+                ],
+                "text": [
+                    {
+                        "title": "Основи візуальних комунікацій і комп`ютерної графіки",
+                        "teacher": "Галишич Р.Я., 112 XIX н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/team/19%3a26e55d0163d74ce8b8b55db9e863c498%40thread.tacv2/conversations?groupId=079579b7-3877-4732-abf3-aca0f52a9836&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    },
+                    {
+                        "title": "Основи дизайну предметного середовища ",
+                        "teacher": "Лисенко О.Ю., 112 XIX н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/meetup-join/19%3a6ENA0mUsxZYCwxdlmu-vMdefp62FvJE5b2ys6x_Eyp01%40thread.tacv2/1660240342766?context=%7b%22Tid%22%3a%227631cd62-5187-4e15-8b8e-ef653e366e7a%22%2c%22Oid%22%3a%22dd414dbd-1b82-47b1-8263-0d56d28e71e9%22%7d"
+                    }
+                ]
+            },
+            {
+                "para": "4",
+                "time": "14:15−15:50",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Основи дизайну предметного середовища ",
+                        "teacher": "Лисенко О.Ю., 112 XIX н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/meetup-join/19%3a6ENA0mUsxZYCwxdlmu-vMdefp62FvJE5b2ys6x_Eyp01%40thread.tacv2/1660240342766?context=%7b%22Tid%22%3a%227631cd62-5187-4e15-8b8e-ef653e366e7a%22%2c%22Oid%22%3a%22dd414dbd-1b82-47b1-8263-0d56d28e71e9%22%7d"
+                    }
+                ]
+            },
+            {
+                "para": "5",
+                "time": "16:00−17:35",
+                "type": [
+                    "group_znam"
+                ],
+                "text": [
+                    {
+                        "title": "Живопис, рисунок, скульптура, частина 3",
+                        "teacher": "Мільчевич С.І., 304 Гол. н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://teams.microsoft.com/l/team/19%3a-E-8kfwpYqtOEK-g1nK9vs6LEqW3GIP4GhT1ZpsbPM81%40thread.tacv2/conversations?groupId=74f6ad02-a5ff-47d9-a1f0-cc99df6794e7&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "para": "1",
+                "time": "8:30-10:05",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Основи ергономіки",
+                        "teacher": "Рочняк Ю.А., 304 Гол. н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://teams.microsoft.com/l/team/19%3a2FxvTwcI8gOt3580T3v_FUkn9sNkLSjoM36qv6hPLek1%40thread.tacv2/conversations?groupId=36892f11-b28a-4aab-b649-64cffc9a8ed8&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            },
+            {
+                "para": "2",
+                "time": "10:20-11:55",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Філософія",
+                        "teacher": "Повторева С.М., 304 Гол. н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://teams.microsoft.com/l/team/19%3aXjjN_EeTiLz60HtS5oHcxXsb8v1i5INhvKQ1JGETclU1%40thread.tacv2/conversations?groupId=933a567a-6614-428a-8256-bec266f118f3&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            },
+            {
+                "para": "3",
+                "time": "12:10-13:45",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Основи дизайну предметного середовища ",
+                        "teacher": "Лисенко О.Ю., 304 Гол. н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://teams.microsoft.com/l/meetup-join/19%3a4TLHb5L_kTmpjZWvg7L6_tbLTcYNCYME9lpY3W211cE1%40thread.tacv2/1660585186888?context=%7b%22Tid%22%3a%227631cd62-5187-4e15-8b8e-ef653e366e7a%22%2c%22Oid%22%3a%22dd414dbd-1b82-47b1-8263-0d56d28e71e9%22%7d"
+                    }
+                ]
+            },
+            {
+                "para": "4",
+                "time": "14:15−15:50",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Основи візуальних комунікацій і комп`ютерної графіки",
+                        "teacher": "Мер'є О.В., 304 Гол. н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://teams.microsoft.com/l/message/19:JZPE0B0p5xYliNZOCdkexPrRmvekeDaTO3GnkZf8bOc1@thread.tacv2/1660047707754?groupId=983c4105-566d-48d7-98d0-aa3a64901ce9"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "para": "1",
+                "time": "8:30-10:05",
+                "type": [
+                    "sub_1_full",
+                    "sub_2_full"
+                ],
+                "text": [
+                    {
+                        "title": "Живопис, рисунок, скульптура, частина 3",
+                        "teacher": "Лясковський О.Й., 337 Гол. н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/team/19%3aX4KWd50O3W6b0hLgBle_eYSKurVdfXyptiPwWlXpeyM1%40thread.tacv2/conversations?groupId=0fe43af3-5140-4705-9554-cf080ee02db6&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    },
+                    {
+                        "title": "Живопис, рисунок, скульптура, частина 3",
+                        "teacher": "Сентимреі Ю.Г., 337 Гол. н.к., ",
+                        "lesson_is": ", Практична",
+                        "link": "https://teams.microsoft.com/l/team/19%3aX4KWd50O3W6b0hLgBle_eYSKurVdfXyptiPwWlXpeyM1%40thread.tacv2/conversations?groupId=0fe43af3-5140-4705-9554-cf080ee02db6&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            },
+            {
+                "para": "2",
+                "time": "10:20-11:55",
+                "type": [
+                    "sub_1_full",
+                    "sub_2_full"
+                ],
+                "text": [
+                    {
+                        "title": "Живопис, рисунок, скульптура, частина 3",
+                        "teacher": "Лясковський О.Й., 337 Гол. н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/team/19%3aX4KWd50O3W6b0hLgBle_eYSKurVdfXyptiPwWlXpeyM1%40thread.tacv2/conversations?groupId=0fe43af3-5140-4705-9554-cf080ee02db6&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    },
+                    {
+                        "title": "Живопис, рисунок, скульптура, частина 3",
+                        "teacher": "Сентимреі Ю.Г., 337 Гол. н.к., ",
+                        "lesson_is": ", Практична",
+                        "link": "https://teams.microsoft.com/l/team/19%3aX4KWd50O3W6b0hLgBle_eYSKurVdfXyptiPwWlXpeyM1%40thread.tacv2/conversations?groupId=0fe43af3-5140-4705-9554-cf080ee02db6&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            },
+            {
+                "para": "3",
+                "time": "12:10-13:45",
+                "type": [
+                    "group_chys",
+                    "group_znam"
+                ],
+                "text": [
+                    {
+                        "title": "Філософія",
+                        "teacher": "Повторева С.М., 403 I н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/team/19%3aXjjN_EeTiLz60HtS5oHcxXsb8v1i5INhvKQ1JGETclU1%40thread.tacv2/conversations?groupId=933a567a-6614-428a-8256-bec266f118f3&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    },
+                    {
+                        "title": "Основи ергономіки",
+                        "teacher": "Дида О.А., ",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/team/19%3asliF-rfikDK8iKtP3-NKW90SztquT786qFW4a_NPTpY1%40thread.tacv2/conversations?groupId=86f5d26c-673d-4987-a8dc-d02e1a397e1e&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            },
+            {
+                "para": "4",
+                "time": "14:15−15:50",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Основи дизайну предметного середовища ",
+                        "teacher": "Олешко О.П., Топилко С.І., 109 XIX н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/team/19%3abkbQYLihIYSfGOEouBj6BuWigpXaVS_rz8NqDtpmze01%40thread.tacv2/conversations?groupId=e9fcc8ba-33f3-4003-8d4f-c4556bff9707&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            }
+        ]
+    ],
+    "days": [
+        "понеділок",
+        "вівторок",
+        "середа",
+        "четвер"
+    ]
+}

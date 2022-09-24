@@ -1,0 +1,14 @@
+.header_section{
+    // background-color: pink;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0px;
+
+    .h_button{
+        background: none;
+        border: none;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+}
