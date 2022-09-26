@@ -53,8 +53,10 @@ class Search_Main extends Component {
                     key={index}
                     students_groups={this.props.students_groups}
                     getDataFromFirebase={this.props.getDataFromFirebase}
+                    current_group={this.props.current_group}
                     setCurrentGroup={this.props.setCurrentGroup}
                     setSearchModal={this.props.setSearchModal}
+                    set_localStorage={this.props.set_localStorage}
                   />
                 })}
               </div>

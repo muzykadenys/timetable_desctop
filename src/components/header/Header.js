@@ -7,6 +7,8 @@ class Header extends Component {
   btn_click(){
     // this.props.getData()
     this.props.setSearchModal(true)
+
+    // this.props.set_localStorage()
   }
 
   render() {

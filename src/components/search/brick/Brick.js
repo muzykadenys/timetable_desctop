@@ -3,11 +3,21 @@ import React, { Component, StyleSheet } from 'react'
 import './brick.scss'
 
 class Brick extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       
+    }
+  }
+  
 
-  brick_click(){
-    this.props.getDataFromFirebase(`${this.props.group}`);
+  async brick_click(){
+    await this.props.getDataFromFirebase(`${this.props.group}`);
     // hide modal window
-    this.props.setSearchModal(false);
+    await this.props.setSearchModal(false);
+    await this.props.set_localStorage();
+    
   }
 
   render() {

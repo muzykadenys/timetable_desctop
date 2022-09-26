@@ -35,7 +35,7 @@ export function getStudents(p_student_groups){
             console.log(`${logs}> > No data available`);
         }
         }).catch((error) => {
-        console.error(`${logs}> error`);
+            console.error(`${logs}> error`);
         });
 }
 
