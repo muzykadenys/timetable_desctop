@@ -5,7 +5,7 @@ import './brick.scss'
 class Brick extends Component {
 
   brick_click(){
-    this.props.getDataFromFirebase(this.props.group);
+    this.props.getDataFromFirebase(`${this.props.group}`);
     // hide modal window
     this.props.setSearchModal(false);
   }

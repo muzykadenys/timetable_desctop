@@ -89,9 +89,12 @@ $b_5:#f2ebe7;
         .variants_wrapper{
             display: flex;
             justify-content: center;
+            height: 65%;
 
             .variants{
                 @extend %grid_bricks;
+                overflow-y: scroll;
+                scroll-snap-type: y mandatory;
             }
         }
     }

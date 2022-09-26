@@ -27,7 +27,7 @@ export function getStudents(p_student_groups){
     get(child(ref(getDatabase()), `students_groups/`)).then((snapshot) => {
         if (snapshot.exists()) 
         {
-             console.log(`${logs}> value ${snapshot.val()}`)
+            //  console.log(`${logs}> value ${snapshot.val()}`)
              p_student_groups(snapshot.val())
         } 
         else
