@@ -13,11 +13,16 @@ class Brick extends Component {
   
 
   async brick_click(){
-    await this.props.getDataFromFirebase(`${this.props.group}`);
-    // hide modal window
-    await this.props.setSearchModal(false);
-    await this.props.set_localStorage();
-    
+    // if value in brick isnt empty do next
+    if(this.props.group != ""){
+      await this.props.getDataFromFirebase(`${this.props.group}`);
+      // hide modal window
+      await this.props.setSearchModal(false);
+      // writing in localStorage
+      await this.props.set_localStorage();
+      // set var that this is NOT first visit
+      await this.props.setIsFirstVisit(false);
+    }
   }
 
   render() {

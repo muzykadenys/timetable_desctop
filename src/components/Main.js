@@ -37,13 +37,15 @@ function Main() {
     ]);
 
     //list that contains students groups
-    var [students_groups, setStudentsGroups] = useState(["shit no groups"]);
+    var [students_groups, setStudentsGroups] = useState([]);
 
     //name of current group
-    var [current_group, setCurrentGroup] = useState("empty group");
+    var [current_group, setCurrentGroup] = useState("💩🗑️🗿");
 
     //var that show or hide search window
     var [search_modal, setSearchModal] = useState(false);
+    // var that shows is it first visit
+    var [isFirstVisit, setIsFirstVisit] = useState(false);
 
     //.list with groups which user select
     var [selected_groups_list, setSelectedGroupsList] = useState([]);
@@ -70,41 +72,80 @@ function Main() {
 
     // write data in local storage
     function set_localStorage(){
-      // const obj = {
-      //   "last": "ПМ-777",
-      //   "all": ["ПМ-666"]
-      // }
       
-      const obj = {
-        "last": `${current_group}`,
-        "all": selected_groups_list
+      if(current_group != "" && current_group != "💩🗑️🗿")
+      {
+
+        const obj = {
+          "last": `${current_group}`,
+          "all": selected_groups_list
+        }
+
+        console.log(`set_localStorage> write in storage`)
+        localStorage.setItem('selected_groups', JSON.stringify(obj))
+
+        console.log(`set_localStorage> SUCCESSS!`)
       }
-      console.log(`set_localStorage> write in storage`)
-      localStorage.setItem('selected_groups', JSON.stringify(obj))
+      else
+      {
+        console.log(`set_localStorage> FAILURE!`)
+      }
+
+      
     }
 
     // getting data from local storage
     function get_localStorage(){
       const obj = localStorage.getItem('selected_groups');
-      const j_obj = JSON.parse(obj);
-      // console.log(`get_localStorage> ${JSON.parse(obj).last}`)
-      setCurrentGroup(j_obj.last)
-      getDataFromFirebase(j_obj.last)
+
+      if(obj) // if localStorage data exist
+      { 
+        const j_obj = JSON.parse(obj);
+      
+        setSelectedGroupsList(j_obj.all)
+        setCurrentGroup(j_obj.last)
+        getDataFromFirebase(j_obj.last)
+
+        console.log(`get_localStorage> SUCCESSS!`)
+      }
+      else// if localStorage data NOT exist
+      {
+        console.log(`get_localStorage> FAILURE!`)
+
+        getStudents(setStudentsGroups);
+
+        setIsFirstVisit(true)
+        setSearchModal(true)
+      }
+      
     }
 
     // getting data from firebase and writing in days_list and weekdays_list and students_groups
     function getDataFromFirebase (p_text){
-      getStudents(setStudentsGroups);
-      getFirebase(p_text, setDays_List, setWeekdays_List);
-      setCurrentGroup(p_text)
+      if (p_text == current_group)
+      {
+        console.log(`getDataFromFirebase> REPETITION SAME GROUP!`)
+      }
+      else if(p_text != "")
+      {
+        getStudents(setStudentsGroups);
+        getFirebase(p_text, setDays_List, setWeekdays_List);
+        setCurrentGroup(p_text)
 
       if(!selected_groups_list.includes(p_text)){
+        console.log(`NOT REPEATS> ${selected_groups_list}`)
         var arr = selected_groups_list;
         arr.push(p_text)
         setSelectedGroupsList(arr)
       }
 
-      console.log(`selected list> ${selected_groups_list}`)
+      // console.log(`selected list> ${p_text}`)
+      console.log(`getDataFromFirebase> SUCCESS!`)
+      }
+      else
+      {
+        console.log(`getDataFromFirebase> FAILURE!`)
+      }
     }
 
     // getting data from json file
@@ -132,6 +173,13 @@ function Main() {
 
     return (
       <div className="Main">
+
+        <button onClick={()=>
+        {
+          localStorage.removeItem('selected_groups');
+          console.log("> !!! LOCALSTORAGE DATA IS REMOVED !!!")
+        }}>clear localStorage</button>
+
         <App_Start
         app={app}
         setApp={setApp}
@@ -149,8 +197,11 @@ function Main() {
         students_groups={students_groups} 
         getDataFromFirebase={getDataFromFirebase}
         current_group={current_group}
+        selected_groups_list={selected_groups_list}
         setCurrentGroup={setCurrentGroup}
         set_localStorage={set_localStorage}
+        isFirstVisit={isFirstVisit}
+        setIsFirstVisit={setIsFirstVisit}
         />
         <Header
         current_group={current_group}

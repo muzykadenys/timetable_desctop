@@ -8,10 +8,11 @@ class Search_Main extends Component {
 
   // function that close modal search window
   close_modal(){
-    this.props.setSearchModal(false)
+    // if this is first visit, user cant close search window
+    if(!this.props.isFirstVisit){
+      this.props.setSearchModal(false)
+    }
   }
-
-
 
   render() {
     const search_class = 'search_section';
@@ -25,20 +26,31 @@ class Search_Main extends Component {
             </div>
 
             <div className='choosen_bricks_wrapper'>
-              <div className='choosen_bricks'>
-                <Brick/>
-                <Brick/>
-                <Brick/>
-                <Brick/>
-                <Brick/>
-                <Brick/>
-                <Brick/>
-                <Brick/>
-                <Brick/>
-                <Brick/>
-                <Brick/>
-                <Brick/>
-              </div>
+            {
+                //  if selected list is NOT empty
+                this.props.selected_groups_list.length != 0 
+                ? 
+                <div className='choosen_bricks'>
+                  {
+                  this.props.selected_groups_list.map((elem, index) => {
+                      return <Brick
+                        group={elem}
+                        key={index}
+                        getDataFromFirebase={this.props.getDataFromFirebase}
+                        current_group={this.props.current_group}
+                        setCurrentGroup={this.props.setCurrentGroup}
+                        setSearchModal={this.props.setSearchModal}
+                        set_localStorage={this.props.set_localStorage}
+                        setIsFirstVisit={this.props.setIsFirstVisit}
+                      />
+                      
+                    })
+                  }
+                </div>
+                  : // if selected list is empty
+                  <p className='selected_empty_text'>ти не вибрав жодного розкладу 🗿</p>
+                  
+            }
             </div>
 
 
@@ -57,6 +69,7 @@ class Search_Main extends Component {
                     setCurrentGroup={this.props.setCurrentGroup}
                     setSearchModal={this.props.setSearchModal}
                     set_localStorage={this.props.set_localStorage}
+                    setIsFirstVisit={this.props.setIsFirstVisit}
                   />
                 })}
               </div>

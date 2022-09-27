@@ -78,6 +78,11 @@ $b_5:#f2ebe7;
                 margin-top: 30px;
                 @extend %grid_bricks; 
             }
+
+            .selected_empty_text{
+                font-weight: 500;
+                color: $b_4;
+            }
         }
 
         .separator{

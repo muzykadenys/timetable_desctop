@@ -9,6 +9,8 @@ export function getFirebase(p_text, p_set_days_list, p_set_weekdays_list){
         if (snapshot.exists()) 
         {
             //  console.log(`${logs}> value ${snapshot.val().group[0][0].text[0].title}`)
+
+
              p_set_days_list(snapshot.val().group)
              p_set_weekdays_list(snapshot.val().days)
         } 
