@@ -35,6 +35,8 @@ function Main() {
         "oral",
         "cumshot"
     ]);
+    // list with awailable and NOT available weekdays of groups
+    var [weekdays_added_list, setWeekdaysAdded_List] = useState([]);
 
     //list that contains students groups
     var [students_groups, setStudentsGroups] = useState([]);
@@ -129,7 +131,7 @@ function Main() {
       else if(p_text != "")
       {
         getStudents(setStudentsGroups);
-        getFirebase(p_text, setDays_List, setWeekdays_List);
+        getFirebase(p_text, setDays_List, setWeekdays_List, setWeekdaysAdded_List);
         setCurrentGroup(p_text)
 
       if(!selected_groups_list.includes(p_text)){
@@ -212,6 +214,7 @@ function Main() {
         <Main_Block 
           days_list={days_list} 
           weekdays_list={weekdays_list} 
+          weekdays_added_list={weekdays_added_list}
           isDaysListEmpty={isDaysListEmpty}
         />
 

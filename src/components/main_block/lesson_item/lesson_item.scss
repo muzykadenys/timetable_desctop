@@ -16,6 +16,7 @@ $b_3:#684f3e;
 $b_4:#e8ded4;
 $b_5:#f2ebe7;
 
+$max_width_stikcer: 260px;
 
 %sticker_paddings{
     padding: 0px 15px;
@@ -43,6 +44,7 @@ $b_5:#f2ebe7;
     background-color: $y_1;
     margin: 10px;
     width: 100%;
+    max-width: $max_width_stikcer;
     padding-bottom: 15px;
     // height: 110px;
     clip-path: inset(0 round 5px);
@@ -51,7 +53,7 @@ $b_5:#f2ebe7;
     .lil_main{
         @extend %sticker_paddings;
         padding-top: 10px;
-
+        
 
         .lil_t_1{
             @extend %spacing_eraser;
@@ -102,6 +104,7 @@ $b_5:#f2ebe7;
     // background-color: $y_1;
     margin: 10px;
     width: 100%;
+    max-width: $max_width_stikcer;
     padding-bottom: 15px;
     
     clip-path: inset(0 round 5px);
@@ -173,6 +176,7 @@ $b_5:#f2ebe7;
     
     margin: 10px;
     width: 100%;
+    max-width: $max_width_stikcer;
     // background-color: red;
     // height: 180px;
     clip-path: inset(0 round 5px);

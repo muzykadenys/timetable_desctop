@@ -8,27 +8,123 @@ class Day_list extends Component {
 
   render() {
     return (
-      <ul className='day_list'>
+      (
+        !this.props.isEmptyDay
+      )
+      ?
+      (
+        <ul className='day_list'>
 
-        <div className='day_name'>
-          {this.props.weekday}
-        </div>
+          <div className='day_name'>
+            {this.props.weekday}
+          </div>
 
-        <div className='day_wrapper'>
-          {this.props.para_list.map((elem, index) => {
-            return <Lesson_Item 
-              para={this.props.para_list[index]} 
-              key={index}
-              isDaysListEmpty = {this.props.isDaysListEmpty}
-            />
+          <div className='day_wrapper'>
+            {this.props.para_list.map((elem, index) => {
+              return <Lesson_Item
+                isEmptyDay={this.props.isEmptyDay}
+                para={this.props.para_list[index]} 
+                key={index}
+                isDaysListEmpty = {this.props.isDaysListEmpty}
+              />
+              
+            })}
             
-          })}
-          
-        </div>
+          </div>
 
-      </ul>
+        </ul>
+      )
+      : // ------------------------------------------------- else
+      (
+        <ul className='day_list'>
+
+          <div className='day_name'>
+            {this.props.weekday}
+          </div>
+
+          <div className='day_wrapper'>
+            <Lesson_Item 
+                  isEmptyDay={this.props.isEmptyDay}
+                  para={[]} 
+                  // key={index}
+                  isDaysListEmpty = {this.props.isDaysListEmpty}
+                />
+          </div>
+
+        </ul>
+      )
+
+
+     
     )
   }
 }
 
 export default Day_list
+
+
+
+
+
+// {
+
+
+//   (
+//     !this.props.isEmptyDay
+//   )
+//   ?
+//   (
+//   <div className='day_wrapper'>
+//   {this.props.para_list.map((elem, index) => {
+//     return <Lesson_Item 
+//       isEmptyDay={this.props.isEmptyDay}
+//       para={this.props.para_list[index]} 
+//       key={index}
+//       isDaysListEmpty = {this.props.isDaysListEmpty}
+//     />
+//   })}
+//   </div>
+// )
+// : // ------------------------------------------------- else
+// (
+// <div className='day_wrapper'>
+// <Lesson_Item 
+//   isEmptyDay={this.props.isEmptyDay}
+//   para={[]} 
+//   isDaysListEmpty = {this.props.isDaysListEmpty}
+// />
+// </div>
+
+// )
+
+
+// }
+
+
+
+
+
+
+
+
+// return (
+//   <ul className='day_list'>
+
+//     <div className='day_name'>
+//       {this.props.weekday}
+//     </div>
+
+//     <div className='day_wrapper'>
+//       {this.props.para_list.map((elem, index) => {
+//         return <Lesson_Item 
+//           para={this.props.para_list[index]} 
+//           key={index}
+//           isDaysListEmpty = {this.props.isDaysListEmpty}
+//         />
+        
+//       })}
+      
+//     </div>
+
+//   </ul>
+// )

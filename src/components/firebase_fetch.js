@@ -2,7 +2,7 @@ import { getDatabase, ref, child, get } from "firebase/database";
 
 
 
-export function getFirebase(p_text, p_set_days_list, p_set_weekdays_list){
+export function getFirebase(p_text, p_set_days_list, p_set_weekdays_list, p_set_weekdays_added_list){
     const logs = "firebase_fetch.js   getFirebase";
 
     get(child(ref(getDatabase()), `${p_text}/`)).then((snapshot) => {
@@ -10,9 +10,10 @@ export function getFirebase(p_text, p_set_days_list, p_set_weekdays_list){
         {
             //  console.log(`${logs}> value ${snapshot.val().group[0][0].text[0].title}`)
 
-
+            p_set_weekdays_added_list(snapshot.val().days_added)
              p_set_days_list(snapshot.val().group)
              p_set_weekdays_list(snapshot.val().days)
+             
         } 
         else
         {

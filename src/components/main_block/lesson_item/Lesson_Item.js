@@ -391,8 +391,11 @@ class Lesson_Item extends Component {
     // here we choose which sticker type will be shown
     layout_manager(){
         const type_var = this.props.para.type
+        if(this.props.isEmptyDay){
 
-        if("group_full".includes(type_var[0])){
+            return this.r()
+        }
+        else if("group_full".includes(type_var[0])){
             return this.layout_1()
         }
         else if("group_chys group_znam".includes(type_var[0])){
