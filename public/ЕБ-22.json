@@ -1,0 +1,289 @@
+{
+    "group": [
+        [
+            {
+                "para": "1",
+                "time": "8:30-10:05",
+                "type": [
+                    "group_znam"
+                ],
+                "text": [
+                    {
+                        "title": "Економіка підприємства",
+                        "teacher": "Зарицька О.Л., ",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MWRjYWRmN2QtZGJjOS00NzkxLWEyN2QtNjdhMTRmMTQxYzJh%40thread.v2/0?context=%7b%22Tid%22%3a%227631cd62-5187-4e15-8b8e-ef653e366e7a%22%2c%22Oid%22%3a%2246d22caa-b5e6-4ff9-adf5-cd201ff5ebe4%22%7d"
+                    }
+                ]
+            },
+            {
+                "para": "2",
+                "time": "10:20-11:55",
+                "type": [
+                    "group_znam"
+                ],
+                "text": [
+                    {
+                        "title": "Філософія",
+                        "teacher": "Коваль А.Я., ",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/channel/19%3apIp3fuCum5Ne4GmjQ883Lrdr_uz9k69__ZaD-dH-F_01%40thread.tacv2/General?groupId=7bd53ad6-84d5-423e-aa90-78aa20a561f3&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            },
+            {
+                "para": "3",
+                "time": "12:10-13:45",
+                "type": [
+                    "group_chys"
+                ],
+                "text": [
+                    {
+                        "title": "Маркетинг",
+                        "teacher": "Шандрівська О.Є., ",
+                        "lesson_is": " Практична",
+                        "link": "https://zoom.us/j/3125523572?pwd=NDVqa08yVlVBb0x3aHF0Q3hpWUlxQT09  Идентификатор конференции: 312 552 3572 Код доступа: 055859"
+                    }
+                ]
+            },
+            {
+                "para": "4",
+                "time": "14:15−15:50",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Економіка підприємства",
+                        "teacher": "Зарицька О.Л., ",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZWZiNGUwZjYtZjU5MS00ZmU4LWJlOWYtYzg5YWUyYTY4ZGRm%40thread.v2/0?context=%7b%22Tid%22%3a%227631cd62-5187-4e15-8b8e-ef653e366e7a%22%2c%22Oid%22%3a%2246d22caa-b5e6-4ff9-adf5-cd201ff5ebe4%22%7d"
+                    }
+                ]
+            },
+            {
+                "para": "5",
+                "time": "16:00−17:35",
+                "type": [
+                    "group_znam",
+                    "group_chys"
+                ],
+                "text": [
+                    {
+                        "title": "Маркетинг",
+                        "teacher": "Мащак Н.М., анг.мовою",
+                        "lesson_is": " Лабораторна",
+                        "link": "https://teams.microsoft.com/l/team/19%3als_SM3RJHsHMGt6MWMhP80pupFFMuBIkWkEnIXmb5qI1%40thread.tacv2/conversations?groupId=9c25238c-41f2-4265-bfd6-e53c049c87b9&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    },
+                    {
+                        "title": "Маркетинг",
+                        "teacher": "Мащак Н.М., анг.мовою",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/team/19%3als_SM3RJHsHMGt6MWMhP80pupFFMuBIkWkEnIXmb5qI1%40thread.tacv2/conversations?groupId=9c25238c-41f2-4265-bfd6-e53c049c87b9&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "para": "3",
+                "time": "12:10-13:45",
+                "type": [
+                    "sub_1_chys",
+                    "group_znam",
+                    "sub_2_chys"
+                ],
+                "text": [
+                    {
+                        "title": "Маркетинг",
+                        "teacher": "Шандрівська О.Є., ",
+                        "lesson_is": " Лабораторна",
+                        "link": "https://zoom.us//3125523572?pwd=NDVqa08yVlVBb0x3aHF0Q3hpWUlxQT09  Идентификатор конференции: 312 552 3572 Код доступа: 055859"
+                    },
+                    {
+                        "title": "Міжнародна економіка",
+                        "teacher": "Процик І.С., ",
+                        "lesson_is": " Практична",
+                        "link": "https://us02web.zoom.us/j/2781647847?pwd=WDJBcHpTVVJ6ZXkrcnNjbGtua0taZz09"
+                    },
+                    {
+                        "title": "Маркетинг",
+                        "teacher": "Прийма Л.П., ",
+                        "lesson_is": ", Лабораторна",
+                        "link": "https://us05web.zoom.us/j/6811125082?pwd=a25RUzFORUdaaUhydVlVNDBBS0J1Zz09"
+                    }
+                ]
+            },
+            {
+                "para": "4",
+                "time": "14:15−15:50",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Міжнародна економіка",
+                        "teacher": "Процик І.С., ",
+                        "lesson_is": " Практична",
+                        "link": "https://us04web.zoom.us/j/2781647847?pwd=WDJBcHpTVVJ6ZXkrcnNjbGtua0taZz09  Идентификатор конференции: 278 164 7847"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "para": "2",
+                "time": "10:20-11:55",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Бухгалтерський облік",
+                        "teacher": "Яремко І.Й., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://us05web.zoom.us/j/91234352658?pwd=R3lXclQ4LzI0ejZ6Z2hHTXNqYVRQZz09"
+                    }
+                ]
+            },
+            {
+                "para": "3",
+                "time": "12:10-13:45",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Міжнародна економіка",
+                        "teacher": "Босак А.О., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://teams.microsoft.com/l/meetup-join/19%3aKrwkk473A-Wre_8bbX4TRpLGKmK7evJuvjuHUbBCB3U1%40thread.tacv2/1660373777240?context=%7b%22Tid%22%3a%227631cd62-5187-4e15-8b8e-ef653e366e7a%22%2c%22Oid%22%3a%2236b05760-09e4-4c8b-b0fb-44561f303688%22%7d"
+                    }
+                ]
+            },
+            {
+                "para": "4",
+                "time": "14:15−15:50",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Філософія",
+                        "teacher": "Коваль А.Я., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://teams.microsoft.com/l/channel/19%3apIp3fuCum5Ne4GmjQ883Lrdr_uz9k69__ZaD-dH-F_01%40thread.tacv2/General?groupId=7bd53ad6-84d5-423e-aa90-78aa20a561f3&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "para": "1",
+                "time": "8:30-10:05",
+                "type": [
+                    "sub_1_full"
+                ],
+                "text": [
+                    {
+                        "title": "Бухгалтерський облік",
+                        "teacher": "Оліховський В.Я., ",
+                        "lesson_is": " Лабораторна",
+                        "link": "https://us04web.zoom.us/j/2940199196?pwd=ZEJHQm9jWEIwZVFGeFFrc3dVaTBxQT09"
+                    }
+                ]
+            },
+            {
+                "para": "2",
+                "time": "10:20-11:55",
+                "type": [
+                    "sub_2_full"
+                ],
+                "text": [
+                    {
+                        "title": "Бухгалтерський облік",
+                        "teacher": "Оліховський В.Я., ",
+                        "lesson_is": ", Лабораторна",
+                        "link": "https://us04web.zoom.us/j/2940199196?pwd=ZEJHQm9jWEIwZVFGeFFrc3dVaTBxQT09"
+                    }
+                ]
+            },
+            {
+                "para": "3",
+                "time": "12:10-13:45",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Бухгалтерський облік",
+                        "teacher": "Оліховський В.Я., ",
+                        "lesson_is": " Практична",
+                        "link": "https://us04web.zoom.us/j/2940199196?pwd=ZEJHQm9jWEIwZVFGeFFrc3dVaTBxQT09"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "para": "1",
+                "time": "8:30-10:05",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Економіка підприємства",
+                        "teacher": "Зарицька О.Л., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NjNhODNlZDUtNDIxYi00ODNkLWFjOTctNGJmZTgwYTJhOGFl%40thread.v2/0?context=%7b%22Tid%22%3a%227631cd62-5187-4e15-8b8e-ef653e366e7a%22%2c%22Oid%22%3a%2246d22caa-b5e6-4ff9-adf5-cd201ff5ebe4%22%7d"
+                    }
+                ]
+            },
+            {
+                "para": "2",
+                "time": "10:20-11:55",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Маркетинг",
+                        "teacher": "Шандрівська О.Є., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://zoom.us/j/3125523572?pwd=NDVqa08yVlVBb0x3aHF0Q3hpWUlxQT09  Идентификатор конференции: 312 552 3572 Код доступа: 055859"
+                    }
+                ]
+            },
+            {
+                "para": "4",
+                "time": "14:15−15:50",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Фізичне виховання, частина 3",
+                        "teacher": "Пономарьов С.В., 14.40.-16.10.  вул.Самчука 11",
+                        "lesson_is": " Практична",
+                        "link": "https://us05web.zoom.us/j/98069211822?pwd=NmZKeDQ0QmdOUXduZjlHZVRmd0V5dz09"
+                    }
+                ]
+            }
+        ]
+    ],
+    "days": [
+        "понеділок",
+        "вівторок",
+        "середа",
+        "четвер",
+        "п'ятниця"
+    ],
+    "days_added": [
+        "понеділок",
+        "вівторок",
+        "середа",
+        "четвер",
+        "п'ятниця"
+    ]
+}

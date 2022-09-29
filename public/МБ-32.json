@@ -1,0 +1,276 @@
+{
+    "group": [
+        [
+            {
+                "para": "1",
+                "time": "8:30-10:05",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Технології зварювання",
+                        "teacher": "Дзюбик А.Р., 7 XVI н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://us02web.zoom.us/j/85638147889?pwd=YldReUU2a0xabFB0Q2JES2lDTmpCQT09"
+                    }
+                ]
+            },
+            {
+                "para": "2",
+                "time": "10:20-11:55",
+                "type": [
+                    "group_chys",
+                    "group_znam"
+                ],
+                "text": [
+                    {
+                        "title": "Технології зварювання",
+                        "teacher": "Дзюбик А.Р., 7 XVI н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://us02web.zoom.us/j/84844381483?pwd=NEF4d2ZNelV3MWJTZ0FrZDBHWXErdz09"
+                    },
+                    {
+                        "title": "Взаємозамінність, стандартизація та технічні вимірювання",
+                        "teacher": "Литвиняк Я.М., 7 XVI н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://teams.microsoft.com/l/meetup-join/19%3aNULOJ_J6FzzmF1BpRZhBC3aYtQY5UJ1_R8EzHsD3VSE1%40thread.tacv2/1660306623277?context=%7b%22Tid%22%3a%227631cd62-5187-4e15-8b8e-ef653e366e7a%22%2c%22Oid%22%3a%229e06fc88-5fc4-4029-bc51-1f25c1ff9034%22%7d"
+                    }
+                ]
+            },
+            {
+                "para": "3",
+                "time": "12:10-13:45",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Деталі машин, частина 1",
+                        "teacher": "Малащенко В.О., 61 XIV н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://us04web.zoom.us/j/6919005115?pwd=ZXRrLzF6bERpNWQ4NUs3cFJHNVlnQT09"
+                    }
+                ]
+            },
+            {
+                "para": "5",
+                "time": "16:00−17:35",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Основи охорони праці та безпека життєдіяльності",
+                        "teacher": "Витрикуш Н.М., 72 XIV н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://us02web.zoom.us/j/84954208280?pwd=elh0cjJIOTBXOGlJMkQ0SlJGSWNSUT09"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "para": "2",
+                "time": "10:20-11:55",
+                "type": [
+                    "sub_1_chys",
+                    "sub_2_chys",
+                    "group_znam"
+                ],
+                "text": [
+                    {
+                        "title": "Технологія машинобудування",
+                        "teacher": "Кук А.М., 12 XIV н.к., ",
+                        "lesson_is": " Лабораторна",
+                        "link": "https://teams.microsoft.com/l/meetup-join/19%3ae2990631844a48169827335525603d80%40thread.tacv2/1659965022703?context=%7b%22Tid%22%3a%227631cd62-5187-4e15-8b8e-ef653e366e7a%22%2c%22Oid%22%3a%228cf84d8b-1261-456e-a345-6c81224f1cd2%22%7d"
+                    },
+                    {
+                        "title": "Взаємозамінність, стандартизація та технічні вимірювання",
+                        "teacher": "Литвиняк Я.М., 50 XIV н.к., ",
+                        "lesson_is": ", Лабораторна",
+                        "link": "https://teams.microsoft.com/l/meetup-join/19%3aNULOJ_J6FzzmF1BpRZhBC3aYtQY5UJ1_R8EzHsD3VSE1%40thread.tacv2/1660306824303?context=%7b%22Tid%22%3a%227631cd62-5187-4e15-8b8e-ef653e366e7a%22%2c%22Oid%22%3a%229e06fc88-5fc4-4029-bc51-1f25c1ff9034%22%7d"
+                    },
+                    {
+                        "title": "Основи охорони праці та безпека життєдіяльності",
+                        "teacher": "Крилова Г.В., 313 III н.к., ",
+                        "lesson_is": " Лабораторна",
+                        "link": "https://teams.microsoft.com/l/meetup-join/19%3aLkzsnT1dSpVCfGkftuu20pKedbOlHxqNY4FfOv7iXdM1%40thread.tacv2/1661190267672?context=%7b%22Tid%22%3a%227631cd62-5187-4e15-8b8e-ef653e366e7a%22%2c%22Oid%22%3a%229b63c1e0-9d67-4080-a93d-9a87a77bcdc6%22%7d"
+                    }
+                ]
+            },
+            {
+                "para": "3",
+                "time": "12:10-13:45",
+                "type": [
+                    "group_chys",
+                    "group_znam"
+                ],
+                "text": [
+                    {
+                        "title": "Металорізальні верстати",
+                        "teacher": "Боровець В.М., 8 XIV н.к., ",
+                        "lesson_is": " Лабораторна",
+                        "link": "https://teams.microsoft.com/l/team/19%3a8c3YdV1htF4XnDxkwY5U2UevLMuui9WrujHpDYx_GGE1%40thread.tacv2/conversations?groupId=ef81ef3a-0e1e-4d05-93c5-8262b6fefbc3&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    },
+                    {
+                        "title": "Взаємозамінність, стандартизація та технічні вимірювання",
+                        "teacher": "Литвиняк Я.М., 50 XIV н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/meetup-join/19%3aNULOJ_J6FzzmF1BpRZhBC3aYtQY5UJ1_R8EzHsD3VSE1%40thread.tacv2/1660306904210?context=%7b%22Tid%22%3a%227631cd62-5187-4e15-8b8e-ef653e366e7a%22%2c%22Oid%22%3a%229e06fc88-5fc4-4029-bc51-1f25c1ff9034%22%7d"
+                    }
+                ]
+            },
+            {
+                "para": "4",
+                "time": "14:15−15:50",
+                "type": [
+                    "sub_1_chys",
+                    "sub_2_full"
+                ],
+                "text": [
+                    {
+                        "title": "Взаємозамінність, стандартизація та технічні вимірювання",
+                        "teacher": "Сліпчук А.М., 50 XIV н.к., ",
+                        "lesson_is": " Лабораторна",
+                        "link": "https://teams.microsoft.com/l/channel/19%3aEY7RVOmvozLLeSOb23yJJLzsXt05QtPwcon5OfzUNNs1%40thread.tacv2/%25D0%2597%25D0%25B0%25D0%25B3%25D0%25B0%25D0%25BB%25D1%258C%25D0%25BD%25D0%25B5?groupId=b75aba3a-3015-454c-89cb-7f0fec7e852d&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    },
+                    {
+                        "title": "Технології зварювання",
+                        "teacher": "Хомич І.Б., 10 XVII н.к., ",
+                        "lesson_is": ", Лабораторна",
+                        "link": "https://us04web.zoom.us/j/83960753626?pwd=Y1AvMWg5bHhNQVFiTXBzT2tVelh2dz09"
+                    }
+                ]
+            },
+            {
+                "para": "5",
+                "time": "16:00−17:35",
+                "type": [
+                    "group_chys",
+                    "sub_2_znam"
+                ],
+                "text": [
+                    {
+                        "title": "Основи охорони праці та безпека життєдіяльності",
+                        "teacher": "Крилова Г.В., 311 III н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://teams.microsoft.com/l/meetup-join/19%3aBEITlB0TeDu6qBeCEktn0MS1f76R39g8oPbXpOYHZQc1%40thread.tacv2/1660567825148?context=%7b%22Tid%22%3a%227631cd62-5187-4e15-8b8e-ef653e366e7a%22%2c%22Oid%22%3a%229b63c1e0-9d67-4080-a93d-9a87a77bcdc6%22%7d"
+                    },
+                    {
+                        "title": "Технології зварювання",
+                        "teacher": "Хомич І.Б., 10 XVII н.к., ",
+                        "lesson_is": ", Лабораторна",
+                        "link": "https://us04web.zoom.us/j/83960753626?pwd=Y1AvMWg5bHhNQVFiTXBzT2tVelh2dz09"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "para": "3",
+                "time": "12:10-13:45",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Металорізальні верстати",
+                        "teacher": "Боровець В.М., 61 XIV н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://teams.microsoft.com/l/team/19%3a0Y02SodLyTyXHSldOsGCzdype-DB6rh5sA6hdi9T2qc1%40thread.tacv2/conversations?groupId=42be7514-2151-4a81-b646-d8b549fe6e2f&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            },
+            {
+                "para": "4",
+                "time": "14:15−15:50",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Технологія машинобудування",
+                        "teacher": "Кук А.М., 7 XVI н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://teams.microsoft.com/l/meetup-join/19%3arrH7h81QAAOcdjVhIyRQgPpJWXJ55JB-An1TzIz1Akg1%40thread.tacv2/1661343497849?context=%7b%22Tid%22%3a%227631cd62-5187-4e15-8b8e-ef653e366e7a%22%2c%22Oid%22%3a%22351cc3cb-cbb4-4578-9c3b-3fddfcf8cede%22%7d"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "para": "4",
+                "time": "14:15−15:50",
+                "type": [
+                    "sub_1_full"
+                ],
+                "text": [
+                    {
+                        "title": "Технології зварювання",
+                        "teacher": "Хомич І.Б., 10 XVII н.к., ",
+                        "lesson_is": " Лабораторна",
+                        "link": "https://us04web.zoom.us/j/83960753626?pwd=Y1AvMWg5bHhNQVFiTXBzT2tVelh2dz09"
+                    }
+                ]
+            },
+            {
+                "para": "5",
+                "time": "16:00−17:35",
+                "type": [
+                    "sub_1_chys",
+                    "sub_2_chys",
+                    "group_znam"
+                ],
+                "text": [
+                    {
+                        "title": "Технології зварювання",
+                        "teacher": "Хомич І.Б., 10 XVII н.к., ",
+                        "lesson_is": " Лабораторна",
+                        "link": "https://us04web.zoom.us/j/83960753626?pwd=Y1AvMWg5bHhNQVFiTXBzT2tVelh2dz09"
+                    },
+                    {
+                        "title": "Технологія машинобудування",
+                        "teacher": "Кук А.М., 12 XIV н.к., ",
+                        "lesson_is": ", Лабораторна",
+                        "link": "https://teams.microsoft.com/l/meetup-join/19%3ae2990631844a48169827335525603d80%40thread.tacv2/1659964145796?context=%7b%22Tid%22%3a%227631cd62-5187-4e15-8b8e-ef653e366e7a%22%2c%22Oid%22%3a%228cf84d8b-1261-456e-a345-6c81224f1cd2%22%7d"
+                    },
+                    {
+                        "title": "Деталі машин, частина 1",
+                        "teacher": "Данило Я.Я., Предко Р.Я., 311 VI н.к., ",
+                        "lesson_is": " Лабораторна",
+                        "link": "https://us02web.zoom.us/j/84980835923?pwd=UW9LQi94UkFwZStBK3F2clNDWkMvZz09"
+                    }
+                ]
+            },
+            {
+                "para": "6",
+                "time": "17:40−19:15",
+                "type": [
+                    "group_chys"
+                ],
+                "text": [
+                    {
+                        "title": "Технологія машинобудування",
+                        "teacher": "Кусий Я.М., 11 XIV н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://us02web.zoom.us/j/86035208520?pwd=bldjcTlQUHBBL3JObXV4TGUwbGxSZz09"
+                    }
+                ]
+            }
+        ]
+    ],
+    "days": [
+        "понеділок",
+        "вівторок",
+        "середа",
+        "четвер"
+    ],
+    "days_added": [
+        "понеділок",
+        "вівторок",
+        "середа",
+        "четвер",
+        "cum_п'ятниця"
+    ]
+}

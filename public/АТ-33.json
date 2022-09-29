@@ -1,0 +1,248 @@
+{
+    "group": [
+        [
+            {
+                "para": "2",
+                "time": "10:20-11:55",
+                "type": [
+                    "group_chys"
+                ],
+                "text": [
+                    {
+                        "title": "Гідропневмоавтоматика",
+                        "teacher": "Дмитерко П.Р., 72 XIV н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://teams.microsoft.com/l/team/19%3aquAhiwvOZgDdhAPAHS0pvVfK6bm6i2k0UlyI5fcxBrw1%40thread.tacv2/conversations?groupId=10a6faff-a85b-484b-9817-847ea68937c3&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            },
+            {
+                "para": "3",
+                "time": "12:10-13:45",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Деталі машин і підйомно-транспортне обладнання",
+                        "teacher": "Новіцький Я.М., 111 VI н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://us04web.zoom.us/j/75899344241?pwd=VmsleEP9OzETjT45YchJiS1CFOYDNj.1"
+                    }
+                ]
+            },
+            {
+                "para": "4",
+                "time": "14:15−15:50",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Автомобілі, частина 2",
+                        "teacher": "Пороховський Ю.В., 111 VI н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://zoom.us/j/6967491849?pwd=a2g3ZGRGREtZWHI4dWlkVFhHU21sUT09"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "para": "2",
+                "time": "10:20-11:55",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Технологічне обладнання підприємств автомобільного транспорту",
+                        "teacher": "Глобчак М.В., 214 VI н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://us02web.zoom.us/j/4749208487?pwd=R2FxUkNXUFBXdkhnbkEwaU1rQ0VHZz09"
+                    }
+                ]
+            },
+            {
+                "para": "3",
+                "time": "12:10-13:45",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Основи автосервісу",
+                        "teacher": "Юськів В.М., 214 VI н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://us04web.zoom.us/j/9060785675?pwd=eFo2WFVacTN1KzlraXk2WXpRTUYxdz09"
+                    }
+                ]
+            },
+            {
+                "para": "4",
+                "time": "14:15−15:50",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Технологія ремонту автомобілів",
+                        "teacher": "Гудз Г.С., 214 VI н.к., ",
+                        "lesson_is": " Лекція",
+                        "link": "https://us04web.zoom.us/j/78697984536?pwd=fomJd7WevMkhB4dmfC9IGGsp5LSIZU.1"
+                    }
+                ]
+            },
+            {
+                "para": "5",
+                "time": "16:00−17:35",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Технологічне обладнання підприємств автомобільного транспорту",
+                        "teacher": "Глобчак М.В., 214 VI н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://us02web.zoom.us/j/4749208487?pwd=R2FxUkNXUFBXdkhnbkEwaU1rQ0VHZz09"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "para": "3",
+                "time": "12:10-13:45",
+                "type": [
+                    "sub_1_znam"
+                ],
+                "text": [
+                    {
+                        "title": "Автомобілі, частина 2",
+                        "teacher": "Осмак О.А., 114 VI н.к., ",
+                        "lesson_is": " Лабораторна",
+                        "link": "https://us04web.zoom.us/j/9462147543?pwd=MjhrbmFXNlp1d0RtR2d5M09BYTZVZz09"
+                    }
+                ]
+            },
+            {
+                "para": "4",
+                "time": "14:15−15:50",
+                "type": [
+                    "sub_2_znam",
+                    "sub_2_chys",
+                    "sub_1_full"
+                ],
+                "text": [
+                    {
+                        "title": "Автомобілі, частина 2",
+                        "teacher": "Осмак О.А., 114 VI н.к., ",
+                        "lesson_is": ", Лабораторна",
+                        "link": "https://us04web.zoom.us/j/9462147543?pwd=MjhrbmFXNlp1d0RtR2d5M09BYTZVZz09"
+                    },
+                    {
+                        "title": "Гідропневмоавтоматика",
+                        "teacher": "Дмитерко П.Р., 56 XIV н.к., ",
+                        "lesson_is": ", Лабораторна",
+                        "link": "https://teams.microsoft.com/l/team/19%3a3gRFhusKaaeklCEtjLorkqgOvY_nnloU_32F7QePskE1%40thread.tacv2/conversations?groupId=1d6ba221-ca65-4aff-bffd-f8c467f60dbc&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    },
+                    {
+                        "title": "Технологія ремонту автомобілів",
+                        "teacher": "Глобчак М.В., 108 VI н.к., ",
+                        "lesson_is": " Лабораторна",
+                        "link": "https://us02web.zoom.us/j/4749208487?pwd=R2FxUkNXUFBXdkhnbkEwaU1rQ0VHZz09"
+                    }
+                ]
+            },
+            {
+                "para": "5",
+                "time": "16:00−17:35",
+                "type": [
+                    "sub_2_full",
+                    "sub_1_chys"
+                ],
+                "text": [
+                    {
+                        "title": "Технологія ремонту автомобілів",
+                        "teacher": "Глобчак М.В., 108 VI н.к., ",
+                        "lesson_is": ", Лабораторна",
+                        "link": "https://us02web.zoom.us/j/4749208487?pwd=R2FxUkNXUFBXdkhnbkEwaU1rQ0VHZz09"
+                    },
+                    {
+                        "title": "Гідропневмоавтоматика",
+                        "teacher": "Дмитерко П.Р., 56 XIV н.к., ",
+                        "lesson_is": " Лабораторна",
+                        "link": "https://teams.microsoft.com/l/team/19%3a3gRFhusKaaeklCEtjLorkqgOvY_nnloU_32F7QePskE1%40thread.tacv2/conversations?groupId=1d6ba221-ca65-4aff-bffd-f8c467f60dbc&tenantId=7631cd62-5187-4e15-8b8e-ef653e366e7a"
+                    }
+                ]
+            }
+        ],
+        [
+            {
+                "para": "2",
+                "time": "10:20-11:55",
+                "type": [
+                    "group_full"
+                ],
+                "text": [
+                    {
+                        "title": "Автомобілі, частина 2",
+                        "teacher": "Осмак О.А., 114 VI н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://us04web.zoom.us/j/9462147543?pwd=MjhrbmFXNlp1d0RtR2d5M09BYTZVZz09"
+                    }
+                ]
+            },
+            {
+                "para": "3",
+                "time": "12:10-13:45",
+                "type": [
+                    "group_chys",
+                    "group_znam"
+                ],
+                "text": [
+                    {
+                        "title": "Деталі машин і підйомно-транспортне обладнання",
+                        "teacher": "Новіцький Я.М., 311 VI н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://us04web.zoom.us/j/73439500967?pwd=0Xbg1PcOAWJ4CEvZfJFeOS8KziJGiv.1"
+                    },
+                    {
+                        "title": "Технологія ремонту автомобілів",
+                        "teacher": "Гудз Г.С., 115 VI н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://us04web.zoom.us/j/77037385946?pwd=VaABdVJGebfjsbrSiLC8MEci9Jorai.1"
+                    }
+                ]
+            },
+            {
+                "para": "4",
+                "time": "14:15−15:50",
+                "type": [
+                    "group_znam"
+                ],
+                "text": [
+                    {
+                        "title": "Основи автосервісу",
+                        "teacher": "Юськів В.М., 115 VI н.к., ",
+                        "lesson_is": " Практична",
+                        "link": "https://us04web.zoom.us/j/9060785675?pwd=eFo2WFVacTN1KzlraXk2WXpRTUYxdz09"
+                    }
+                ]
+            }
+        ]
+    ],
+    "days": [
+        "вівторок",
+        "середа",
+        "четвер",
+        "п'ятниця"
+    ],
+    "days_added": [
+        "cum_понеділок",
+        "вівторок",
+        "середа",
+        "четвер",
+        "п'ятниця"
+    ]
+}

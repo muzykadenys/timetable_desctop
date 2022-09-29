@@ -24,7 +24,7 @@ class Lesson_Item extends Component {
         )
     }
 
-    // 1 kind of sticker
+    // 1 kind of sticker ------------------------------------------------------------------------------------------------------
     layout_1 (){
         return (
             <li className='layout_1'>
@@ -48,7 +48,7 @@ class Lesson_Item extends Component {
           )
     }
 
-    // 2 kind of sticker
+    // 2 kind of sticker ------------------------------------------------------------------------------------------------------
     layout_2(){
         // if top sub block exist
         if(this.props.para.text.length === 1 && this.props.para.type.includes("group_chys")){
@@ -152,7 +152,7 @@ class Lesson_Item extends Component {
         
     }
 
-    // 3 kind of sticker
+    // 3 kind of sticker ------------------------------------------------------------------------------------------------------
     layout_3(){
         // if left sub block exist
         if(this.props.para.text.length === 1 && this.props.para.type.includes("sub_1_full")){
@@ -270,7 +270,7 @@ class Lesson_Item extends Component {
         
     }
 
-    // 4 kind of sticker
+    // 4 kind of sticker ------------------------------------------------------------------------------------------------------
     l_4_subs(cls, i, arr){
         var p_faded = ` lil_main_faded`;
 
@@ -381,19 +381,207 @@ class Lesson_Item extends Component {
         
     }
 
+    // 5 kind of sticker ------------------------------------------------------------------------------------------------------
+    l_5_subs(cls, i, arr){
+        var p_faded = ` lil_sub_faded`;
+
+        if(arr[i] === 0){
+            return(
+                <section className={cls + p_faded}>
+                    <p className='lil_t_1'></p>
+                    <p className='lil_t_2'></p>
+
+                    <div className='lil_bot'>
+          
+                        
+                    </div>
+                </section>
+            );
+        }else{
+            return(
+                <section className={cls}>
+                    <p className='lil_t_1'>{`${arr[i].title.slice(0,18)}...`}</p>
+                    <p className='lil_t_2'>{`${arr[i].teacher.slice(0,16)}...`}</p>
+
+                    <div className='lil_bot'>
+                        <button className='lil_btn' onClick={()=>this.go_to_website(`${arr[i].link}`)}>
+                            <div className='lil_btn_text'>посилання</div>
+                            <div className='lil_btn_line'></div>
+                        </button>
+                        
+                    </div>
+                </section>
+            )
+        }
+    }
+
+    l_5_template(arr, is_chys_znam){
+
+        if (is_chys_znam == "chys") {
+            return(
+                <React.Fragment>
+                    <section className='lil_main_1'>
+                    <p className='lil_t_1'>{`${arr[0].title.slice(0,28)}...`}</p>
+                    <p className='lil_t_2'>{`${arr[0].teacher.slice(0,28)}...`}</p>
+    
+                    <div className='lil_bot'>
+                        <button className='lil_btn' onClick={()=>this.go_to_website(`${arr[0].link}`)}>
+                            <div className='lil_btn_text'>посилання</div>
+                            <div className='lil_btn_line'></div>
+                        </button>
+                        
+                    </div>
+                  </section>
+    
+                  <section className='lil_main_2'>
+
+                    {this.l_5_subs("lil_sub_1 lil_sub", 1, arr)}
+
+                    {this.l_5_subs("lil_sub_2 lil_sub", 2, arr)}
+                   
+                  </section>
+                </React.Fragment>
+            )
+        }
+        else if (is_chys_znam == "znam") {
+            return(
+                <React.Fragment>
+                    <section className='lil_main_2 no-radius'>
+                    
+                    {this.l_5_subs("lil_sub_1 lil_sub", 1, arr)}
+
+                    {this.l_5_subs("lil_sub_2 lil_sub", 2, arr)}
+                   
+                  </section>
+                    <section className='lil_main_1'>
+                    <p className='lil_t_1'>{`${arr[0].title.slice(0,28)}...`}</p>
+                    <p className='lil_t_2'>{`${arr[0].teacher.slice(0,28)}...`}</p>
+    
+                    <div className='lil_bot'>
+                        <button className='lil_btn' onClick={()=>this.go_to_website(`${arr[0].link}`)}>
+                            <div className='lil_btn_text'>посилання</div>
+                            <div className='lil_btn_line'></div>
+                        </button>
+                        
+                    </div>
+                  </section>
+    
+                  
+                </React.Fragment>
+            )
+        }
+    }
+
+    layout_5(){
+        var p_data = [0, 0 ,0]
+        var p_type = this.props.para.type
+        let p_type_len = p_type.length
+
+        const p_sub_1 = {
+            group_chys: 0,
+            sub_1_znam: 1,
+            sub_2_znam: 2,
+        }
+        const p_sub_2 = {
+            sub_1_chys: 0,
+            sub_2_chys: 1,
+            group_znam: 2,
+        }
+        let p_sub = {};
+        let is_chys_znam;
+        
+        if(p_type.includes("group_chys")){
+            p_sub = p_sub_1
+            is_chys_znam = "chys"
+        }
+        else{
+            p_sub = p_sub_2
+            is_chys_znam = "znam"
+        }
+
+        // all sub-cards exist
+        if(p_type_len === 3){
+            for(let i = 0; i < 3; i++){
+                p_data[p_sub[`${p_type[i]}`]] = this.props.para.text[i]
+            }
+        }
+        else if(p_type_len === 2){
+            for(let i = 0; i < 2; i++){
+                p_data[p_sub[`${p_type[i]}`]] = this.props.para.text[i]
+            }
+        }
+        else if(p_type_len === 1){
+            for(let i = 0; i < 1; i++){
+                p_data[p_sub[`${p_type[i]}`]] = this.props.para.text[i]
+            }
+        }
+
+        if(true){
+            return (
+                <li className='layout_5'>
+                    
+                {this.layout_header()}
+                
+                {this.l_5_template(p_data, is_chys_znam)}
+    
+                </li>
+            )
+        }
+
+        
+    }
+
     // appears when list is empty
     r(){
         return (
-            <li className='lesson_item'></li>
+            
+            <li className='lesson_item_empty'>
+                <div className='lil_top'>
+                    <p className='lil_time'></p>
+                    <p className='lil_type'>пусто</p>
+                    <p className='lil_para'></p>
+                </div>
+            </li>
           )
+    }
+
+    is_layout_5(p_type_var){
+        let part_1 = false;
+        let part_2 = false;
+        // console.log(`!!!!!!!!!!!!!!!!!!!!>\n${p_type_var[0]}`)
+        if( (p_type_var.includes("group_chys") || p_type_var.includes("group_znam")) )
+        {
+            part_1 = true
+        }
+        if
+        (
+            (p_type_var.includes("sub_1_chys") || p_type_var.includes("sub_2_chys")) || 
+            (p_type_var.includes("sub_1_znam") || p_type_var.includes("sub_2_znam"))
+        )
+        {
+            part_2 = true
+        }
+
+        if ( part_1 && part_2)
+        {
+            return true
+        }
+        else
+        {
+            return false
+        }
     }
 
     // here we choose which sticker type will be shown
     layout_manager(){
         const type_var = this.props.para.type
         if(this.props.isEmptyDay){
-
             return this.r()
+        }
+        else if(this.is_layout_5(type_var)){
+            // console.log(`> layout 5 --------------------------------`)
+            // return <p>layout_5</p>
+            return this.layout_5()
         }
         else if("group_full".includes(type_var[0])){
             return this.layout_1()
