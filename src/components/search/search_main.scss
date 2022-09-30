@@ -73,6 +73,7 @@ $b_5:#f2ebe7;
         .choosen_bricks_wrapper{
             display: flex;
             justify-content: center;
+            margin-bottom: 60px;
 
             .choosen_bricks{
                 margin-top: 30px;
@@ -80,7 +81,8 @@ $b_5:#f2ebe7;
             }
 
             .selected_empty_text{
-                font-weight: 500;
+                font-size: 24px;
+                font-weight: 600;
                 color: $b_4;
             }
         }
@@ -94,7 +96,6 @@ $b_5:#f2ebe7;
         .variants_wrapper{
             display: flex;
             justify-content: center;
-            height: 65%;
 
             .variants{
                 @extend %grid_bricks;

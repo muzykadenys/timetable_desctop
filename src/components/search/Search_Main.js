@@ -48,13 +48,13 @@ class Search_Main extends Component {
                   }
                 </div>
                   : // if selected list is empty
-                  <p className='selected_empty_text'>ти не вибрав жодного розкладу 🗿</p>
+                  <p className='selected_empty_text'>привіт! 👋  вибери свій розклад 📅</p>
                   
             }
             </div>
 
 
-            <div className='separator'></div>
+            {/* <div className='separator'></div> */}
 
 
             <div className='variants_wrapper'>

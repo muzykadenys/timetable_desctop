@@ -527,6 +527,154 @@ class Lesson_Item extends Component {
                 </li>
             )
         }
+    }
+
+    // 6 kind of sticker ------------------------------------------------------------------------------------------------------
+    l_6_subs(cls, i, arr){
+        var p_faded = ` lil_sub_faded`;
+
+        if(arr[i] === 0){
+            return(
+                <section className={cls + p_faded}>
+                    <p className='lil_t_1'></p>
+                    <p className='lil_t_2'></p>
+
+                    <div className='lil_bot'>
+          
+                        
+                    </div>
+                </section>
+            );
+        }else{
+            return(
+                <div className={cls}>
+                    <p className='lil_t_1'>{`${arr[i].title.slice(0,13)}...`}</p>
+                    <p className='lil_t_2'>{`${arr[i].teacher.slice(0,13)}...`}</p>
+
+                    <div className='lil_bot'>
+                        <button className='lil_btn' onClick={()=>this.go_to_website(`${arr[i].link}`)}>
+                            <div className='lil_btn_text'>посилання</div>
+                            <div className='lil_btn_line'></div>
+                        </button>
+                        
+                    </div>
+                </div>
+            )
+        }
+    }
+
+    l_6_template(arr, is_left_right){
+        // 
+        if (is_left_right == "left") {
+            return(
+                <div className='lil_wrapper_6'>
+                    <section className='lil_main_6_1 lil_main_6 lil_left'>
+                        <p className='lil_t_1'>{`${arr[0].title.slice(0,12)}...`}</p>
+                        <p className='lil_t_2'>{`${arr[0].teacher.slice(0,13)}...`}</p>
+
+                        <div className='lil_bot'>
+                            <button className='lil_btn' onClick={()=>this.go_to_website(`${arr[0].link}`)}>
+                                <div className='lil_btn_text'>посилання</div>
+                                <div className='lil_btn_line'></div>
+                            </button>
+                            
+                        </div>
+                    </section>
+    
+                    <section className='lil_main_6_2 lil_main_6 lil_right'>
+                        {this.l_6_subs('lil_sub_6_1 lil_sub_6', 1, arr)}
+
+                        {this.l_6_subs('lil_sub_6_2 lil_sub_6', 2, arr)}
+                        
+                    </section>
+                </div>
+            )
+        }
+        else if (is_left_right == "right") {
+            return(
+                <div className='lil_wrapper_6'>
+
+                    <section className='lil_main_6_2 lil_main_6 lil_left'>
+                        {this.l_6_subs('lil_sub_6_1 lil_sub_6', 1, arr)}
+
+                        {this.l_6_subs('lil_sub_6_2 lil_sub_6', 2, arr)}
+                        
+                    </section>
+
+                    <section className='lil_main_6_1 lil_main_6 lil_right'>
+                        <p className='lil_t_1'>{`${arr[0].title.slice(0,12)}...`}</p>
+                        <p className='lil_t_2'>{`${arr[0].teacher.slice(0,13)}...`}</p>
+
+                        <div className='lil_bot'>
+                            <button className='lil_btn' onClick={()=>this.go_to_website(`${arr[0].link}`)}>
+                                <div className='lil_btn_text'>посилання</div>
+                                <div className='lil_btn_line'></div>
+                            </button>
+                            
+                        </div>
+                    </section>
+    
+                    
+                </div>
+            )
+        }
+    }
+
+    layout_6(){
+        var p_data = [0, 0 ,0]
+        var p_type = this.props.para.type
+        let p_type_len = p_type.length
+
+        const p_sub_1 = {
+            sub_1_full: 0,
+            sub_2_chys: 1,
+            sub_2_znam: 2,
+        }
+        const p_sub_2 = {
+            sub_1_chys: 0,
+            sub_1_znam: 1,
+            sub_2_full: 2,
+        }
+        let p_sub = {};
+        let is_left_right;
+        
+        if(p_type.includes("sub_1_full")){
+            p_sub = p_sub_1
+            is_left_right = "left"
+        }
+        else{
+            p_sub = p_sub_2
+            is_left_right = "right"
+        }
+
+        // all sub-cards exist
+        if(p_type_len === 3){
+            for(let i = 0; i < 3; i++){
+                p_data[p_sub[`${p_type[i]}`]] = this.props.para.text[i]
+            }
+        }
+        else if(p_type_len === 2){
+            for(let i = 0; i < 2; i++){
+                p_data[p_sub[`${p_type[i]}`]] = this.props.para.text[i]
+            }
+        }
+        else if(p_type_len === 1){
+            for(let i = 0; i < 1; i++){
+                p_data[p_sub[`${p_type[i]}`]] = this.props.para.text[i]
+            }
+        }
+
+        if(true){
+            return (
+                <li className='layout_6'>
+                    
+                {this.layout_header()}
+                
+                {this.l_6_template(p_data, is_left_right)}
+    
+                </li>
+            )
+        }
 
         
     }
@@ -544,6 +692,8 @@ class Lesson_Item extends Component {
             </li>
           )
     }
+
+                                                                                                                                                
 
     is_layout_5(p_type_var){
         let part_1 = false;
@@ -571,12 +721,43 @@ class Lesson_Item extends Component {
             return false
         }
     }
+    is_layout_6(p_type_var){
+        let part_1 = false;
+        let part_2 = false;
+        // console.log(`!!!!!!!!!!!!!!!!!!!!>\n${p_type_var[0]}`)
+        if( (p_type_var.includes("sub_1_full") || p_type_var.includes("sub_2_full")) )
+        {
+            part_1 = true
+        }
+        if
+        (
+            (p_type_var.includes("sub_1_chys") || p_type_var.includes("sub_2_chys")) || 
+            (p_type_var.includes("sub_1_znam") || p_type_var.includes("sub_2_znam"))
+        )
+        {
+            part_2 = true
+        }
+
+        if ( part_1 && part_2)
+        {
+            return true
+        }
+        else
+        {
+            return false
+        }
+    }
 
     // here we choose which sticker type will be shown
     layout_manager(){
         const type_var = this.props.para.type
         if(this.props.isEmptyDay){
             return this.r()
+        }
+        else if(this.is_layout_6(type_var)){
+            // console.log(`> layout 6 --------------------------------`)
+            // return <p>layout_6</p>
+            return this.layout_6()
         }
         else if(this.is_layout_5(type_var)){
             // console.log(`> layout 5 --------------------------------`)

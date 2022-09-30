@@ -454,7 +454,117 @@ $card_split_margin: 2.5px;
     }
 }
 
+// 6 layout
+.layout_6{
+    margin: 10px 0px;
+    width: 100%;
+    max-width: $max_width_stikcer;
+    clip-path: inset(0 round 5px);
 
+    .lil_wrapper_6{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .lil_main_6{
+            width: 50%;
+            // min-width: 30px;
+            
+            .lil_t_1{
+                @extend %spacing_eraser;
+                font-size: 12px;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+            .lil_t_2{
+                @extend %spacing_eraser;
+                font-size: 10px;
+                font-weight: 500;
+            }
+
+            .lil_bot{
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 5px;
+                padding-bottom: 5px;
+                
+                .lil_btn{
+                    @extend %spacing_eraser;
+                    background: none;
+                    border: none;  
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    cursor: pointer;
+    
+                    .lil_btn_text{
+                        font-size: 10px;
+                        font-weight: 600;
+                        color: $b_2;
+                    }
+                    .lil_btn_line{
+                        border-bottom: 2px solid $b_3;
+                        width: 90%;
+                    }
+                }
+            }
+        }
+
+        .lil_main_6_1{
+            display: flex;
+            flex-direction: column;
+            background-color: $y_1;
+            padding: 10px 0px;
+
+
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+
+            .lil_t_1{
+                padding: 0px 15px;
+            }
+            .lil_t_2{
+                padding: 0px 15px;
+            }
+
+            .lil_bot{
+                display: flex;
+                align-items: flex-end;
+                padding: 0px 15px;
+                padding-bottom: 5px;
+                height: 100%;
+            }
+        }
+        .lil_main_6_2{
+
+
+            .lil_sub_6{
+                background-color: $y_1;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                @extend %sticker_paddings;
+            }
+            // .lil_sub_6_1{
+            // }
+            .lil_sub_6_2{
+                background-color: $b_5;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+            .lil_sub_faded{
+                background-color: $b_5;
+                @extend %faded_sub;
+            }
+        }
+        .lil_left{
+            margin-right: $card_split_margin;
+        }
+        .lil_right{
+            margin-left: $card_split_margin;
+        }
+        
+    }
+}
 
 //header ------------------------------------------------------------------------------------------------------------
 // top bar of sticker
