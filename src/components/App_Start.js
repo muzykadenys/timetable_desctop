@@ -19,8 +19,8 @@ class App_Start extends Component {
             this.props.setApp(initializeApp(this.props.firebaseConfig));
             
             this.props. get_localStorage()
-      
-            // this.props.getDataFromFirebase("ДС-13")
+
+            
           }
     }
 

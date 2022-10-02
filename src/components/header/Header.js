@@ -14,7 +14,7 @@ class Header extends Component {
   render() {
     return (
       <div className='header_section'>
-        <button className='h_button' onClick={()=>{this.btn_click()}}>{this.props.current_group}</button>
+        <button className='h_button' onClick={()=>{this.btn_click()}}>{`${this.props.current_group}`}</button>
       </div>
     )
   }

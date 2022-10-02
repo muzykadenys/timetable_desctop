@@ -32,21 +32,23 @@ class Main_Block extends Component {
             let local_index = this.props.weekdays_list.indexOf(`${elem}`)
             // let local_index = index
             
-            return <Day_list
+            return <Day_list className="aga"
             isEmptyDay={false}
             weekday={this.props.weekdays_list[local_index]}
             para_list={this.props.days_list[local_index]}
             key={local_index}
             isDaysListEmpty = {this.props.isDaysListEmpty}
+            chys_znam={this.props.chys_znam}
             />
           }
           else
           {
             // console.log(`empty day is called!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!`)
-            return <Day_list
+            return <Day_list className="aga"
             weekday={elem.replace("cum_", "")}
             isEmptyDay={true}
             key={index}
+            chys_znam={this.props.chys_znam}
             />
           }
         })}

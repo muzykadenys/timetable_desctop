@@ -2,11 +2,30 @@ import React, { Component } from 'react'
 
 import "./lesson_item.scss"
 
+
 class Lesson_Item extends Component {
 
     constructor (props){
         super(props)
 
+        this.state = {
+            clsAddition_chys : "----",
+            clsAddition_znam : "----"
+        }
+    }
+
+    add_cls_chys_znam(){
+
+        if(`${this.props.chys_znam}` == "chys"){
+            this.setState({
+                clsAddition_chys : "chys"
+            })
+        }
+        else if(`${this.props.chys_znam}` == "znam"){
+            this.setState({
+                clsAddition_znam : "znam"
+            })
+        }
     }
 
     go_to_website(link){
@@ -50,6 +69,7 @@ class Lesson_Item extends Component {
 
     // 2 kind of sticker ------------------------------------------------------------------------------------------------------
     layout_2(){
+
         // if top sub block exist
         if(this.props.para.text.length === 1 && this.props.para.type.includes("group_chys")){
 
@@ -58,7 +78,7 @@ class Lesson_Item extends Component {
                     
                   {this.layout_header()}
                   
-                  <section className='lil_main_1'>
+                  <section className={`lil_main_1 ${this.state.clsAddition_chys}`}>
                     <p className='lil_t_1'>{`${this.props.para.text[0].title.slice(0,28)}...`}</p>
                     <p className='lil_t_2'>{`${this.props.para.text[0].teacher.slice(0,28)}...`}</p>
     
@@ -71,7 +91,7 @@ class Lesson_Item extends Component {
                     </div>
                   </section>
     
-                  <section className='lil_main_2 lil_main_faded'>
+                  <section className={`lil_main_2 ${this.state.clsAddition_znam}`}>
                     <p className='lil_t_1'></p>
                     <p className='lil_t_2'></p>
     
@@ -90,7 +110,7 @@ class Lesson_Item extends Component {
                     
                   {this.layout_header()}
                   
-                  <section className='lil_main_1 lil_main_faded'>
+                  <section className={`lil_main_1 ${this.state.clsAddition_chys}`}>
                     <p className='lil_t_1'></p>
                     <p className='lil_t_2'></p>
     
@@ -98,7 +118,7 @@ class Lesson_Item extends Component {
                     </div>
                   </section>
     
-                  <section className='lil_main_2'>
+                  <section className={`lil_main_2 ${this.state.clsAddition_znam}`}>
                     <p className='lil_t_1'>{`${this.props.para.text[0].title.slice(0,28)}...`}</p>
                     <p className='lil_t_2'>{`${this.props.para.text[0].teacher.slice(0,28)}...`}</p>
     
@@ -120,7 +140,7 @@ class Lesson_Item extends Component {
                     
                   {this.layout_header()}
                   
-                  <section className='lil_main_1'>
+                  <section className={`lil_main_1 ${this.state.clsAddition_chys}`}>
                     <p className='lil_t_1'>{`${this.props.para.text[0].title.slice(0,28)}...`}</p>
                     <p className='lil_t_2'>{`${this.props.para.text[0].teacher.slice(0,28)}...`}</p>
     
@@ -133,7 +153,7 @@ class Lesson_Item extends Component {
                     </div>
                   </section>
     
-                  <section className='lil_main_2'>
+                  <section className={`lil_main_2 ${this.state.clsAddition_znam}`}>
                     <p className='lil_t_1'>{`${this.props.para.text[1].title.slice(0,28)}...`}</p>
                     <p className='lil_t_2'>{`${this.props.para.text[1].teacher.slice(0,28)}...`}</p>
     
@@ -750,6 +770,8 @@ class Lesson_Item extends Component {
 
     // here we choose which sticker type will be shown
     layout_manager(){
+        
+
         const type_var = this.props.para.type
         if(this.props.isEmptyDay){
             return this.r()
@@ -781,6 +803,10 @@ class Lesson_Item extends Component {
         }
 
         
+    }
+
+    componentDidMount(){
+        this.add_cls_chys_znam()
     }
 
   render() {

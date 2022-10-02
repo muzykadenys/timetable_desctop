@@ -1,7 +1,7 @@
 import React, { Component, useState, useEffect} from 'react'
 import '../index.css'
 
-import {test, getFirebase, getStudents} from './firebase_fetch.js'
+import {test, getFirebase, getStudents, writeWeekFirebase, getWeekFirebase} from './firebase_fetch.js'
 
 import App_Start from './App_Start';
 import Search_Main from './search/Search_Main.js';
@@ -51,24 +51,11 @@ function Main() {
 
     //.list with groups which user select
     var [selected_groups_list, setSelectedGroupsList] = useState([]);
+
+    var [chys_znam, setChysZnam] = useState("cum")
     
     // app in firebase
     var [app, setApp] = useState();
-    
-    // if(isDaysListEmpty){
-    //   setIsDaysListEmpty(false) // set val that days list is not empty
-
-    //   console.log("> start fetching ")
-
-    //   // const app = initializeApp(firebaseConfig);
-    //   setApp(initializeApp(firebaseConfig));
-      
-    //   // get_localStorage()
-
-    //   getDataFromFirebase("ДС-13")
-      
-      
-    // }
 
     // ===================================================================================================================
 
@@ -92,13 +79,59 @@ function Main() {
       {
         console.log(`set_localStorage> FAILURE!`)
       }
+    }
 
-      
+    // writing in firebase chys/znam and date
+    function setWeekChysZnam(obj_week){
+      let chys_znam; 
+
+      const d = new Date();
+      let day = d.getUTCDate();
+      let day_week = d.getDay();
+      let month  = d.getMonth();
+      let year = d.getFullYear();
+
+      let whole_date = `${day}.${month}.${year}`
+      let plain_date_local_storage = `${obj_week}`.replace("chys.", "").replace("znam.", "")
+
+      if (day_week == `0` && (plain_date_local_storage != whole_date)){
+
+        let loc_chys_znam
+        let res
+
+        if(obj_week.includes('chys')){
+          loc_chys_znam = 'znam'
+        }
+        else if(obj_week.includes('znam')){
+          loc_chys_znam = 'chys'
+        }
+
+        res = `${loc_chys_znam}.${whole_date}` // new chys/znam + current date
+        localStorage.setItem(`week`, res)
+
+        console.log(`!!!!!!!!!!!! UPDATE WEEK TO ${loc_chys_znam}`)
+
+        console.log(`= setWeekChysZnam> ${res}`)
+        setChysZnam(res)
+        writeWeekFirebase(res) // write changes in firebase
+      }
+      else{
+        if(obj_week.includes('chys')){
+          chys_znam = 'chys'
+        }
+        else if(obj_week.includes('znam')){
+          chys_znam = 'znam'
+        }
+  
+        console.log(`= setWeekChysZnam> ${obj_week}`)
+        setChysZnam(chys_znam)
+      }
     }
 
     // getting data from local storage
     function get_localStorage(){
       const obj = localStorage.getItem('selected_groups');
+      const obj_week = localStorage.getItem('week');
 
       if(obj) // if localStorage data exist
       { 
@@ -107,6 +140,8 @@ function Main() {
         setSelectedGroupsList(j_obj.all)
         setCurrentGroup(j_obj.last)
         getDataFromFirebase(j_obj.last)
+
+        setWeekChysZnam(obj_week)
 
         console.log(`get_localStorage> SUCCESSS!`)
       }
@@ -118,8 +153,13 @@ function Main() {
 
         setIsFirstVisit(true)
         setSearchModal(true)
+
+        //get data about chys/znam from firebase, if first visit
+        getWeekFirebase( (p_val)=>{
+          localStorage.setItem(`week`, `${p_val}`)
+          setWeekChysZnam(p_val)
+        })
       }
-      
     }
 
     // getting data from firebase and writing in days_list and weekdays_list and students_groups
@@ -176,9 +216,15 @@ function Main() {
     return (
       <div className="Main">
 
+        {/* {chys_znam == "znam" ?
+        <p>znam blyat </p>:
+        <p>chys syka</p>
+        } */}
+
         <button onClick={()=>
         {
           localStorage.removeItem('selected_groups');
+          localStorage.removeItem('week');
           console.log("> !!! LOCALSTORAGE DATA IS REMOVED !!!")
         }}>clear localStorage</button>
 
@@ -190,6 +236,7 @@ function Main() {
         getDataFromFirebase={getDataFromFirebase}
         setIsDaysListEmpty={setIsDaysListEmpty}
         get_localStorage={get_localStorage}
+        setWeekChysZnam={setWeekChysZnam}
         />
 
 
@@ -216,6 +263,7 @@ function Main() {
           weekdays_list={weekdays_list} 
           weekdays_added_list={weekdays_added_list}
           isDaysListEmpty={isDaysListEmpty}
+          chys_znam={chys_znam}
         />
 
       </div>

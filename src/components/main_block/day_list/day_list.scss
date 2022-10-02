@@ -22,15 +22,14 @@ $b_5:#f2ebe7;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // background-color: teal;
     width: 100%;
-    // border: 1px solid black;
     margin: 0px 10px;
+
+    
 
     .day_name{
         text-align: center;
         padding: 6px 0px;
-        // color: $g_8;
         color: $b_4;
         font-size: 15px;
         font-weight: 600;
@@ -43,4 +42,20 @@ $b_5:#f2ebe7;
         width: 100%;
     }
 
+
+    
+}
+
+// =========================================================================================================
+
+@media screen and (max-width: 768px) {
+    .day_list{
+        scroll-snap-align: center;
+        // scroll-snap-type: x mandatory;
+        .day_wrapper{
+            width: 100vw;
+            
+        }
+    }
+    
 }

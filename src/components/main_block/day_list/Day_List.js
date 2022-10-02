@@ -26,6 +26,7 @@ class Day_list extends Component {
                 para={this.props.para_list[index]} 
                 key={index}
                 isDaysListEmpty = {this.props.isDaysListEmpty}
+                chys_znam={this.props.chys_znam}
               />
               
             })}
@@ -48,6 +49,7 @@ class Day_list extends Component {
                   para={[]} 
                   // key={index}
                   isDaysListEmpty = {this.props.isDaysListEmpty}
+                  chys_znam={this.props.chys_znam}
                 />
           </div>
 

@@ -1,4 +1,4 @@
-import { getDatabase, ref, child, get } from "firebase/database";
+import { getDatabase, ref, child, get, set } from "firebase/database";
 
 
 
@@ -40,6 +40,21 @@ export function getStudents(p_student_groups){
         }).catch((error) => {
             console.error(`${logs}> error`);
         });
+}
+export function writeWeekFirebase(p_chys_znam){
+
+    set(ref(getDatabase(), 'week/'), {
+        week: `${p_chys_znam}`
+    })
+}
+
+export function getWeekFirebase(p_week_chys_znam){
+
+    get(ref(getDatabase(), 'week/')).then((snapshot)=>{
+        console.log(`getWeekFirebase>${snapshot.val()['week']}`)
+        p_week_chys_znam(snapshot.val()['week'])
+    })
+
 }
 
 

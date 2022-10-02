@@ -2,6 +2,7 @@ import React, { Component, useState } from 'react'
 
 import "./search_main.scss"
 
+
 import Brick from './brick/Brick'
 
 class Search_Main extends Component {

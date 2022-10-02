@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,12 +16,21 @@ code {
 *{
   font-family: 'Roboto', sans-serif;
   color: #1c1c1e;
+
 }
 *::selection{
   color: #ffe68a;
   background-color:   #6ca0ff;
   
 }
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #e8ded4;
+}
+
+
 .Main{
   /* height: 100vh; */
   /* background-color: #1c1c1e; */
@@ -28,3 +39,4 @@ code {
 /* .App{
   height: 200%;
 } */
+
