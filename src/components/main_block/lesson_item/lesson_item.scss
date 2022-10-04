@@ -281,7 +281,8 @@ $card_split_margin: 2.5px;
         justify-content: space-between;
         section{
             @extend %sticker_paddings;
-            background-color: $y_1;
+            // background-color: $y_1;
+            background-color: $b_5;
             padding-top: 10px;
             padding-bottom: 15px;
             // width: 37.5%;
@@ -355,6 +356,13 @@ $card_split_margin: 2.5px;
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
         }
+
+        .chys{
+            background-color: $y_1;
+        }
+        .znam{
+            background-color: $y_1;
+        }
     }
 }
 
@@ -409,7 +417,7 @@ $card_split_margin: 2.5px;
         }
     }
     .lil_main_1{
-        background-color: $y_1;
+        background-color: $b_5;
         @extend %sticker_paddings;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -440,8 +448,13 @@ $card_split_margin: 2.5px;
             margin-left: $card_split_margin;
         }
         .lil_sub_faded{
-            // background-color: $b_5;
             @extend %faded_sub;
+        }
+        .chys{
+            background-color: $y_1;
+        }
+        .znam{
+            background-color: $y_1;
         }
     }
     .no-radius{
@@ -453,6 +466,12 @@ $card_split_margin: 2.5px;
     }
     .lil_main_faded{
         @extend %faded_sub;
+    }
+    .chys{
+        background-color: $y_1;
+    }
+    .znam{
+        background-color: $y_1;
     }
 }
 
@@ -541,7 +560,7 @@ $card_split_margin: 2.5px;
 
 
             .lil_sub_6{
-                background-color: $y_1;
+                background-color: $b_5;
                 padding-top: 10px;
                 padding-bottom: 10px;
                 @extend %sticker_paddings;
@@ -556,6 +575,14 @@ $card_split_margin: 2.5px;
             .lil_sub_faded{
                 background-color: $b_5;
                 @extend %faded_sub;
+            }
+
+
+            .chys{
+                background-color: $y_1;
+            }
+            .znam{
+                background-color: $y_1;
             }
         }
         .lil_left{

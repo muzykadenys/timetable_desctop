@@ -91,7 +91,7 @@ class Lesson_Item extends Component {
                     </div>
                   </section>
     
-                  <section className={`lil_main_2 ${this.state.clsAddition_znam}`}>
+                  <section className={`lil_main_2 lil_main_faded ${this.state.clsAddition_znam}`}>
                     <p className='lil_t_1'></p>
                     <p className='lil_t_2'></p>
     
@@ -110,7 +110,7 @@ class Lesson_Item extends Component {
                     
                   {this.layout_header()}
                   
-                  <section className={`lil_main_1 ${this.state.clsAddition_chys}`}>
+                  <section className={`lil_main_1 lil_main_faded ${this.state.clsAddition_chys}`}>
                     <p className='lil_t_1'></p>
                     <p className='lil_t_2'></p>
     
@@ -365,9 +365,9 @@ class Lesson_Item extends Component {
                   
                     <div className='lil_wrapper_chys lil_w'>
     
-                        {this.l_4_subs('lil_main_1', 0, p_data)}
+                        {this.l_4_subs(`lil_main_1 ${this.state.clsAddition_chys}`, 0, p_data)}
                         
-                        {this.l_4_subs('lil_main_2', 1, p_data)}
+                        {this.l_4_subs(`lil_main_2 ${this.state.clsAddition_chys}`, 1, p_data)}
     
                         {/* <section className='lil_main_2'>
                             {this.l_4_subs(1, p_data)}
@@ -378,9 +378,9 @@ class Lesson_Item extends Component {
                     <div className='lil_wrapper_znam lil_w'>
     
 
-                        {this.l_4_subs('lil_main_3', 2, p_data)}
+                        {this.l_4_subs(`lil_main_3 ${this.state.clsAddition_znam}`, 2, p_data)}
 
-                        {this.l_4_subs('lil_main_4', 3, p_data)}
+                        {this.l_4_subs(`lil_main_4 ${this.state.clsAddition_znam}`, 3, p_data)}
 
                         {/* <section className='lil_main_1'>
                             {this.l_4_subs(2, p_data)}
@@ -404,6 +404,8 @@ class Lesson_Item extends Component {
     // 5 kind of sticker ------------------------------------------------------------------------------------------------------
     l_5_subs(cls, i, arr){
         var p_faded = ` lil_sub_faded`;
+
+        
 
         if(arr[i] === 0){
             return(
@@ -455,9 +457,9 @@ class Lesson_Item extends Component {
     
                   <section className='lil_main_2'>
 
-                    {this.l_5_subs("lil_sub_1 lil_sub", 1, arr)}
+                    {this.l_5_subs( `lil_sub_1 lil_sub ${this.state.clsAddition_znam}`, 1, arr)}
 
-                    {this.l_5_subs("lil_sub_2 lil_sub", 2, arr)}
+                    {this.l_5_subs(`lil_sub_2 lil_sub ${this.state.clsAddition_znam}` , 2, arr)}
                    
                   </section>
                 </React.Fragment>
@@ -473,7 +475,7 @@ class Lesson_Item extends Component {
                     {this.l_5_subs("lil_sub_2 lil_sub", 2, arr)}
                    
                   </section>
-                    <section className='lil_main_1'>
+                    <section className={`lil_main_1 ${this.state.clsAddition_znam}`}>
                     <p className='lil_t_1'>{`${arr[0].title.slice(0,28)}...`}</p>
                     <p className='lil_t_2'>{`${arr[0].teacher.slice(0,28)}...`}</p>
     
@@ -604,7 +606,7 @@ class Lesson_Item extends Component {
                     <section className='lil_main_6_2 lil_main_6 lil_right'>
                         {this.l_6_subs('lil_sub_6_1 lil_sub_6', 1, arr)}
 
-                        {this.l_6_subs('lil_sub_6_2 lil_sub_6', 2, arr)}
+                        {this.l_6_subs(`lil_sub_6_2 lil_sub_6  ${this.state.clsAddition_znam}`, 2, arr)}
                         
                     </section>
                 </div>
@@ -617,7 +619,7 @@ class Lesson_Item extends Component {
                     <section className='lil_main_6_2 lil_main_6 lil_left'>
                         {this.l_6_subs('lil_sub_6_1 lil_sub_6', 1, arr)}
 
-                        {this.l_6_subs('lil_sub_6_2 lil_sub_6', 2, arr)}
+                        {this.l_6_subs(`lil_sub_6_2 lil_sub_6  ${this.state.clsAddition_znam}`, 2, arr)}
                         
                     </section>
 

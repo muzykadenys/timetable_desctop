@@ -131,17 +131,25 @@ function Main() {
     // getting data from local storage
     function get_localStorage(){
       const obj = localStorage.getItem('selected_groups');
-      const obj_week = localStorage.getItem('week');
+      
 
       if(obj) // if localStorage data exist
       { 
         const j_obj = JSON.parse(obj);
+        const obj_week = localStorage.getItem('week');
       
         setSelectedGroupsList(j_obj.all)
         setCurrentGroup(j_obj.last)
         getDataFromFirebase(j_obj.last)
 
-        setWeekChysZnam(obj_week)
+        if(obj_week){
+          setWeekChysZnam(obj_week)
+        }else{
+          getWeekFirebase( (p_val)=>{
+            localStorage.setItem(`week`, `${p_val}`)
+            setWeekChysZnam(p_val)
+          })
+        }
 
         console.log(`get_localStorage> SUCCESSS!`)
       }
@@ -221,12 +229,12 @@ function Main() {
         <p>chys syka</p>
         } */}
 
-        <button onClick={()=>
+        {/* <button onClick={()=>
         {
           localStorage.removeItem('selected_groups');
           localStorage.removeItem('week');
           console.log("> !!! LOCALSTORAGE DATA IS REMOVED !!!")
-        }}>clear localStorage</button>
+        }}>clear localStorage</button> */}
 
         <App_Start
         app={app}
