@@ -52,13 +52,17 @@ function Main() {
     //.list with groups which user select
     var [selected_groups_list, setSelectedGroupsList] = useState([]);
 
+    // variable for change week chys/znam
     var [chys_znam, setChysZnam] = useState("cum")
+
+    // torays day
+    var [todays_day, setTodaysDay] = useState("")
     
     // app in firebase
     var [app, setApp] = useState();
 
     // ===================================================================================================================
-
+    
     // write data in local storage
     function set_localStorage(){
       
@@ -79,6 +83,16 @@ function Main() {
       {
         console.log(`set_localStorage> FAILURE!`)
       }
+    }
+
+    // get todays day
+    function get_Todays_Day(){
+      const weekday = ["неділя","понеділок","вівторок","середа","четвер","п'ятниця","субота"];
+
+      const d = new Date();
+      let day = weekday[d.getDay()];
+      // console.log(`todays day> ${day}`)
+      setTodaysDay(day);
     }
 
     // writing in firebase chys/znam and date
@@ -245,6 +259,7 @@ function Main() {
         setIsDaysListEmpty={setIsDaysListEmpty}
         get_localStorage={get_localStorage}
         setWeekChysZnam={setWeekChysZnam}
+        get_Todays_Day={get_Todays_Day}
         />
 
 
@@ -272,6 +287,7 @@ function Main() {
           weekdays_added_list={weekdays_added_list}
           isDaysListEmpty={isDaysListEmpty}
           chys_znam={chys_znam}
+          todays_day={todays_day}
         />
 
       </div>

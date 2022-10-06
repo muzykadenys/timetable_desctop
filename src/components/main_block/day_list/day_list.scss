@@ -15,6 +15,7 @@ $b_2:#4c3729;
 $b_3:#684f3e;
 $b_4:#e8ded4;
 $b_5:#f2ebe7;
+$b_6: #d7c3af;
 
 .day_list{
     list-style: none;
@@ -33,6 +34,11 @@ $b_5:#f2ebe7;
         color: $b_4;
         font-size: 15px;
         font-weight: 600;
+    }
+    .day_name.active{
+        font-weight: 700;
+        color: $b_6;
+        
     }
     
     .day_wrapper{

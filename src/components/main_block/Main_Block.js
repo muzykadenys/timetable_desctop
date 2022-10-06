@@ -39,6 +39,7 @@ class Main_Block extends Component {
             key={local_index}
             isDaysListEmpty = {this.props.isDaysListEmpty}
             chys_znam={this.props.chys_znam}
+            todays_day={this.props.todays_day}
             />
           }
           else
@@ -49,6 +50,7 @@ class Main_Block extends Component {
             isEmptyDay={true}
             key={index}
             chys_znam={this.props.chys_znam}
+            todays_day={this.props.todays_day}
             />
           }
         })}

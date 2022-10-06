@@ -20,7 +20,7 @@ class App_Start extends Component {
             
             this.props. get_localStorage()
 
-            
+            this.props.get_Todays_Day()
           }
     }
 

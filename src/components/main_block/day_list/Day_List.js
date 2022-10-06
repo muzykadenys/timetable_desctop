@@ -5,6 +5,9 @@ import Lesson_Item from '../lesson_item/Lesson_Item'
 
 class Day_list extends Component {
 
+  componentDidMount(){
+
+  }
 
   render() {
     return (
@@ -15,7 +18,7 @@ class Day_list extends Component {
       (
         <ul className='day_list'>
 
-          <div className='day_name'>
+          <div className={this.props.todays_day == this.props.weekday ? 'day_name  active' : 'day_name'}>
             {this.props.weekday}
           </div>
 
@@ -39,7 +42,7 @@ class Day_list extends Component {
       (
         <ul className='day_list'>
 
-          <div className='day_name'>
+          <div className={this.props.todays_day == this.props.weekday ? 'day_name  active' : 'day_name'}>
             {this.props.weekday}
           </div>
 
