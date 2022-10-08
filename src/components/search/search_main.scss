@@ -47,14 +47,14 @@ $b_5:#f2ebe7;
     .ss_wrapper{
         padding: 40px 5%;
         background-color: white;
+        height: 84vh;
         width: 70%;
         // max-height: 100%;
         margin: 20px 0px;
         margin-bottom: 40px;
         border-radius: 5px;
         box-shadow: 0px 0px 80px rgba(0,0,0,0.15);
-              
-
+        
 
         .ss_header{
             display: flex;
@@ -67,42 +67,50 @@ $b_5:#f2ebe7;
                 cursor: pointer;
             }
         }
-
-        .choosen_bricks_wrapper{
+        .ss_scroll_wrapper{
             display: flex;
-            justify-content: center;
-            margin-bottom: 60px;
-
-            .choosen_bricks{
-                margin-top: 30px;
-                @extend %grid_bricks; 
-            }
-
-            .selected_empty_text{
-                font-size: 24px;
-                font-weight: 600;
-                color: $b_4;
-            }
-        }
-
-        .separator{
-            
-            margin: 30px 20%;
-            border-bottom: 3px solid $b_5;
-        }
-
-        .variants_wrapper{
-            display: flex;
-            justify-content: center;
+            // justify-content: space-between;
+            flex-direction: column;
+            margin-top: 30px;
+            overflow-y: scroll;
             height: 100%;
+            max-height: 90%;
 
-            .variants{
-                height: 70%;
-                @extend %grid_bricks;
-                overflow-y: scroll;
-                // scroll-snap-type: y mandatory;
+            .choosen_bricks_wrapper{
+                display: flex;
+                justify-content: center;
+                margin-bottom: 60px;
+    
+                .choosen_bricks{
+                    @extend %grid_bricks; 
+                }
+    
+                .selected_empty_text{
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: $b_4;
+                }
+            }
+    
+            .separator{
+                
+                margin: 30px 20%;
+                border-bottom: 3px solid $b_5;
+            }
+    
+            .variants_wrapper{
+                display: flex;
+                justify-content: center;
+                // height: 40vh;
+    
+                .variants{
+                    height: 100%;
+                    @extend %grid_bricks;
+                    // scroll-snap-type: y mandatory;
+                }
             }
         }
+        
     }
 }
 .search_section.active{
@@ -128,28 +136,30 @@ $b_5:#f2ebe7;
     .search_section{
        
         .ss_wrapper{
+            .ss_scroll_wrapper{
+                .choosen_bricks_wrapper{
 
-            .choosen_bricks_wrapper{
-
-                .choosen_bricks{
-                    @extend %grid_bricks_2; 
-                }
-
-                .selected_empty_text{
-                    font-size: 24px;
-                    font-weight: 600;
-                    color: $b_4;
-                }
-            }
+                    .choosen_bricks{
+                        @extend %grid_bricks_2; 
+                    }
     
-            .variants_wrapper{
-                height: 90%;
-
-                .variants{
-                    @extend %grid_bricks_2;
-
+                    .selected_empty_text{
+                        font-size: 24px;
+                        font-weight: 600;
+                        color: $b_4;
+                    }
+                }
+        
+                .variants_wrapper{
+                    height: 90%;
+    
+                    .variants{
+                        @extend %grid_bricks_2;
+    
+                    }
                 }
             }
+            
         }
     }
 }

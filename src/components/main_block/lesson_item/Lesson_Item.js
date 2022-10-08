@@ -470,14 +470,14 @@ class Lesson_Item extends Component {
                 <React.Fragment>
                     <section className='lil_main_2 no-radius'>
                     
-                    {this.l_5_subs("lil_sub_1 lil_sub", 1, arr)}
+                    {this.l_5_subs("lil_sub_1 lil_sub", 0, arr)}
 
-                    {this.l_5_subs("lil_sub_2 lil_sub", 2, arr)}
+                    {this.l_5_subs("lil_sub_2 lil_sub", 1, arr)}
                    
                   </section>
                     <section className={`lil_main_1 ${this.state.clsAddition_znam}`}>
-                    <p className='lil_t_1'>{`${arr[0].title.slice(0,28)}...`}</p>
-                    <p className='lil_t_2'>{`${arr[0].teacher.slice(0,28)}...`}</p>
+                    <p className='lil_t_1'>{`${arr[0].title}...`}</p>
+                    <p className='lil_t_2'>{`${arr[0].teacher}...`}</p>
     
                     <div className='lil_bot'>
                         <button className='lil_btn' onClick={()=>this.go_to_website(`${arr[0].link}`)}>
@@ -586,12 +586,12 @@ class Lesson_Item extends Component {
     }
 
     l_6_template(arr, is_left_right){
-        // 
+
         if (is_left_right == "left") {
             return(
                 <div className='lil_wrapper_6'>
                     <section className='lil_main_6_1 lil_main_6 lil_left'>
-                        <p className='lil_t_1'>{`${arr[0].title.slice(0,12)}...`}</p>
+                        <p className='lil_t_1'>{`${arr[0].title.slice(0,13)}...`}</p>
                         <p className='lil_t_2'>{`${arr[0].teacher.slice(0,13)}...`}</p>
 
                         <div className='lil_bot'>
@@ -617,18 +617,18 @@ class Lesson_Item extends Component {
                 <div className='lil_wrapper_6'>
 
                     <section className='lil_main_6_2 lil_main_6 lil_left'>
-                        {this.l_6_subs('lil_sub_6_1 lil_sub_6', 1, arr)}
+                        {this.l_6_subs('lil_sub_6_1 lil_sub_6', 0, arr)}
 
-                        {this.l_6_subs(`lil_sub_6_2 lil_sub_6  ${this.state.clsAddition_znam}`, 2, arr)}
+                        {this.l_6_subs(`lil_sub_6_2 lil_sub_6  ${this.state.clsAddition_znam}`, 1, arr)}
                         
                     </section>
 
                     <section className='lil_main_6_1 lil_main_6 lil_right'>
-                        <p className='lil_t_1'>{`${arr[0].title.slice(0,12)}...`}</p>
-                        <p className='lil_t_2'>{`${arr[0].teacher.slice(0,13)}...`}</p>
+                        <p className='lil_t_1'>{`${arr[2].title.slice(0,13)}...`}</p>
+                        <p className='lil_t_2'>{`${arr[2].teacher.slice(0,13)}...`}</p>
 
                         <div className='lil_bot'>
-                            <button className='lil_btn' onClick={()=>this.go_to_website(`${arr[0].link}`)}>
+                            <button className='lil_btn' onClick={()=>this.go_to_website(`${arr[2].link}`)}>
                                 <div className='lil_btn_text'>посилання</div>
                                 <div className='lil_btn_line'></div>
                             </button>
@@ -714,6 +714,36 @@ class Lesson_Item extends Component {
             </li>
           )
     }
+    r_error(){
+        return (
+            
+            <li className='lesson_item_empty'>
+                <div className='lil_top'>
+                    <p className='lil_time'></p>
+                    <p className='lil_type'>пусто</p>
+                    <p className='lil_para'></p>
+                </div>
+                <div className='lil_bot'>
+                    щось пішло не так при загрузці пари<br></br>:(
+                </div>
+            </li>
+          )
+    }
+    r_blyat(){
+        return (
+            
+            <li className='lesson_item_empty'>
+                <div className='lil_top'>
+                    <p className='lil_time'></p>
+                    <p className='lil_type'>пусто</p>
+                    <p className='lil_para'></p>
+                </div>
+                <div className='lil_bot'>
+                    dick
+                </div>
+            </li>
+          )
+    }
 
                                                                                                                                                 
 
@@ -770,6 +800,15 @@ class Lesson_Item extends Component {
         }
     }
 
+    // function that catch errors and return emergency card 
+    launch_render(card_to_return){
+        try{
+            return card_to_return
+        }catch{
+            return this.r_error()
+        }
+    }
+
     // here we choose which sticker type will be shown
     layout_manager(){
         
@@ -781,34 +820,70 @@ class Lesson_Item extends Component {
         else if(this.is_layout_6(type_var)){
             // console.log(`> layout 6 --------------------------------`)
             // return <p>layout_6</p>
-            return this.layout_6()
+            // return this.layout_6()
+            // try{
+            //     return this.layout_6()
+            // }catch{
+            //     return this.r_error()
+            // }
+            return this.launch_render(this.layout_6())
         }
         else if(this.is_layout_5(type_var)){
             // console.log(`> layout 5 --------------------------------`)
             // return <p>layout_5</p>
-            return this.layout_5()
+            // return this.layout_5()
+            return this.launch_render(this.layout_5())
         }
         else if("group_full".includes(type_var[0])){
-            return this.layout_1()
+            // return this.layout_1()
+            return this.launch_render(this.layout_1())
         }
         else if("group_chys group_znam".includes(type_var[0])){
-            return this.layout_2()
+            // return this.layout_2()
+            return this.launch_render(this.layout_2())
         }
         else if("sub_1_full sub_2_full".includes(type_var[0])){
-            return this.layout_3()
+            // return this.layout_3()
+            return this.launch_render(this.layout_3())
         }
-        else if("sub_1_znam sub_2_znam sub_1_chys  sub_1_chys".includes(type_var[0])){
-            return this.layout_4()
+        else if("sub_1_znam sub_2_znam sub_1_chys sub_2_chys".includes(type_var[0])){
+            // return this.layout_4()
+            return this.launch_render(this.layout_4())
         }
         else{
             return this.r()
+            // return this.r_blyat()
         }
 
         
     }
 
+    manualScroll(){
+
+        // const weekday = ["неділя","понеділок","вівторок","середа","четвер","п'ятниця","субота"];
+
+        const scroll_week = 
+        {
+            "понеділок": 100,
+            "вівторок": 400,
+            "середа": 600,
+            "четвер": 1000,
+            "п'ятниця": 1300,
+            "субота": 1600
+        }
+
+        console.log(`manual scroll> -----------`)
+        document.getElementById('main_block_section').scroll({
+          behavior: 'smooth',
+          left: scroll_week[`${this.props.todays_day}`],
+          
+        });
+    }
+
     componentDidMount(){
         this.add_cls_chys_znam()
+
+        this.manualScroll()
     }
 
   render() {

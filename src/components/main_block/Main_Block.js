@@ -17,15 +17,28 @@ class Main_Block extends Component {
        ]
     }
   }
+
+
+  scrollTohowItWorks = () =>  {
+    console.log(`manual scroll> -----------`)
+
+    document.getElementById('main_block_section').scroll({
+      behavior: 'smooth',
+      left: 400,
+      
+    });
+  }
   
+  componentDidMount(){
+    // this.scrollTohowItWorks();
+  }
 
   render() {
     return (
-      <div className='main_block_section'>
+      <div className='main_wrapper' >
 
-        {this.props.weekdays_added_list.map((elem, index) => {
-
-          // console.log(`shit here> ${elem}`)
+        <div className='main_block_section' id='main_block_section'>
+          {this.props.weekdays_added_list.map((elem, index) => {
 
           if (!elem.includes("cum_"))
           {
@@ -53,7 +66,8 @@ class Main_Block extends Component {
             todays_day={this.props.todays_day}
             />
           }
-        })}
+          })}
+        </div>
 
       </div>
     )

@@ -1,14 +1,24 @@
-.main_block_section{
-    padding: 0px 4%;
-    // background-color: aquamarine;
-    display: flex;
-    justify-content: space-between;
+.main_wrapper{
+    // transform: rotateX(180deg);
+
+    .main_block_section{
+        padding: 0px 4%;
+        // background-color: aquamarine;
+        display: flex;
+        justify-content: space-between;
+
+        // transform: rotateX(180deg);
+    }
 }
 
+
 @media screen and (max-width: 768px) {
-    .main_block_section{
-        overflow-x: auto;
-        overscroll-behavior-x: contain;
-        scroll-snap-type: x mandatory;
+    .main_wrapper{
+        .main_block_section{
+            overflow-x: auto;
+            overscroll-behavior-x: contain;
+            scroll-snap-type: x mandatory;
+            
+        }
     }
 }

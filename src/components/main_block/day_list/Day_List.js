@@ -4,12 +4,21 @@ import './day_list.scss'
 import Lesson_Item from '../lesson_item/Lesson_Item'
 
 class Day_list extends Component {
+  constructor(props) {
+    super(props)
 
+    this.state = {
+       
+    }
+  }
+
+  
   componentDidMount(){
-
+   
   }
 
   render() {
+    
     return (
       (
         !this.props.isEmptyDay
@@ -30,6 +39,7 @@ class Day_list extends Component {
                 key={index}
                 isDaysListEmpty = {this.props.isDaysListEmpty}
                 chys_znam={this.props.chys_znam}
+                todays_day={this.props.todays_day}
               />
               
             })}
@@ -53,6 +63,7 @@ class Day_list extends Component {
                   // key={index}
                   isDaysListEmpty = {this.props.isDaysListEmpty}
                   chys_znam={this.props.chys_znam}
+                  todays_day={this.props.todays_day}
                 />
           </div>
 
