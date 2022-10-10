@@ -1,23 +1,51 @@
-import React, { Component } from 'react'
-
+import React, { Component, useContext } from 'react'
 import './header.scss'
+import {Context} from '../../context'
 
-class Header extends Component {
+function Header(props){
+  const {
+    setSearchModal,
+    getCurrentGroup,
 
-  btn_click(){
-    // this.props.getData()
-    this.props.setSearchModal(true)
+  } = useContext(Context) 
 
-    // this.props.set_localStorage()
+  function btn_click(){
+
+    setSearchModal(true)
+
   }
 
-  render() {
-    return (
-      <div className='header_section'>
-        <button className='h_button' onClick={()=>{this.btn_click()}}>{`${this.props.current_group}`}</button>
-      </div>
-    )
-  }
+  return (
+    <div className='header_section'>
+      <button className='h_button' onClick={()=>{ btn_click()}}>{`${getCurrentGroup()}`}</button>
+    </div>
+  )
 }
 
 export default Header
+
+
+
+// import React, { Component } from 'react'
+
+// import './header.scss'
+
+// class Header extends Component {
+
+//   btn_click(){
+//     //  props.getData()
+//      props.setSearchModal(true)
+
+//     //  props.set_localStorage()
+//   }
+
+//   render() {
+//     return (
+//       <div className='header_section'>
+//         <button className='h_button' onClick={()=>{ btn_click()}}>{`${ props.current_group}`}</button>
+//       </div>
+//     )
+//   }
+// }
+
+// export default Header

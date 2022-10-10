@@ -872,7 +872,7 @@ class Lesson_Item extends Component {
             "субота": 1600
         }
 
-        console.log(`manual scroll> -----------`)
+        console.log(`manual scroll> --- ${this.props.todays_day}`)
         document.getElementById('main_block_section').scroll({
           behavior: 'smooth',
           left: scroll_week[`${this.props.todays_day}`],

@@ -3,9 +3,29 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import { createStore } from 'redux';
+// import { Provider } from 'react-redux';
+
+
+// const default_state = {
+//   test: "suck some dick"
+// }
+
+// const get_reducer = (state = default_state, action) =>{
+//     switch (action.type){
+//       case "test":
+//         return {...state}
+//       default:
+//         return state
+//     }
+// }
+
+// const store = createStore(get_reducer)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
+  
   <React.StrictMode>
     <App />
   </React.StrictMode>

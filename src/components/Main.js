@@ -7,8 +7,12 @@ import App_Start from './App_Start';
 import Search_Main from './search/Search_Main.js';
 import Header from './header/Header'
 import Main_Block from './main_block/Main_Block';
+import Modal_Window from './modal_window/Modal_Window';
+import Search_Group from './search_group/Search_Group';
 
-import {initializeApp} from "firebase/app"
+import { Context } from '../context';
+import { async } from '@firebase/util';
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyCkmKnmmc7R4wNHSZT3HI1g1bM0eqHy7OA",
@@ -20,13 +24,17 @@ const firebaseConfig = {
     appId: "1:819973348577:web:7ccfc154e279ad0d07eba0",
     measurementId: "G-EK8NHWB35D"
   };
-
+  function getFirebaseConfig(){return firebaseConfig}
 
 function Main() {
     // list with all days temetable
     var [days_list, setDays_List] = useState([]);
+    function getDays_List() { return days_list};
+    
     // variable that shows is days_list is empty
     var [isDaysListEmpty, setIsDaysListEmpty] = useState(true);
+    function getIsDaysListEmpty() { return isDaysListEmpty};
+
     //list with awailable weekday for group
     var [weekdays_list, setWeekdays_List] = useState([
         "password",
@@ -35,34 +43,105 @@ function Main() {
         "oral",
         "cumshot"
     ]);
+    function getWeekdays_List() { return weekdays_list};
+
     // list with awailable and NOT available weekdays of groups
     var [weekdays_added_list, setWeekdaysAdded_List] = useState([]);
+    function getWeekdaysAdded_List() { return weekdays_added_list};
 
     //list that contains students groups
     var [students_groups, setStudentsGroups] = useState([]);
+    function getStudentsGroups() { return students_groups};
 
     //name of current group
     var [current_group, setCurrentGroup] = useState("💩🗑️🗿");
+    function getCurrentGroup() { return current_group};
 
     //var that show or hide search window
     var [search_modal, setSearchModal] = useState(false);
+    function getSearchModal() { return search_modal};
+    
+    //var that show or hide search window
+    var [modal_window, setModalWindow] = useState(false);
+    function getModalWindow() { return modal_window};
+
+
     // var that shows is it first visit
     var [isFirstVisit, setIsFirstVisit] = useState(false);
+    function getIsFirstVisit() { return isFirstVisit};
 
     //.list with groups which user select
     var [selected_groups_list, setSelectedGroupsList] = useState([]);
+    function getSelectedGroupsList() { return selected_groups_list};
 
     // variable for change week chys/znam
     var [chys_znam, setChysZnam] = useState("cum")
+    function getChysZnam() { return chys_znam};
 
     // torays day
     var [todays_day, setTodaysDay] = useState("")
+    function getTodaysDay() { return todays_day};
     
     // app in firebase
     var [app, setApp] = useState();
+    function getApp() { return app};
+
+    // object which will be passed to every component
+    const value_for_context = {
+      getFirebaseConfig,
+
+      getDays_List,
+      setDays_List,
+
+      setIsDaysListEmpty,
+      getIsDaysListEmpty,
+
+      getWeekdays_List,
+      setWeekdays_List,
+      
+      getWeekdaysAdded_List,
+      setWeekdaysAdded_List,
+
+      getStudentsGroups,
+      setStudentsGroups,
+
+      getCurrentGroup,
+      setCurrentGroup,
+
+      getSearchModal,
+      setSearchModal,
+
+      getModalWindow,
+      setModalWindow,
+
+      getIsFirstVisit,
+      setIsFirstVisit,
+
+      getSelectedGroupsList,
+      setSelectedGroupsList,
+
+      getChysZnam,
+      setChysZnam,
+
+      getTodaysDay,
+      setTodaysDay,
+
+      getApp,
+      setApp,
+
+      // functions ----------------------
+
+      get_localStorage,
+      get_Todays_Day,
+
+      getDataFromFirebase,
+
+      set_localStorage,
+    }
 
     // ===================================================================================================================
-    
+  
+
     // write data in local storage
     function set_localStorage(){
       
@@ -81,7 +160,7 @@ function Main() {
       }
       else
       {
-        console.log(`set_localStorage> FAILURE!`)
+        console.log(`set_localStorage> FAILURE! ${current_group}`)
       }
     }
 
@@ -185,26 +264,27 @@ function Main() {
     }
 
     // getting data from firebase and writing in days_list and weekdays_list and students_groups
-    function getDataFromFirebase (p_text){
+    function getDataFromFirebase(p_text){
       if (p_text == current_group)
       {
         console.log(`getDataFromFirebase> REPETITION SAME GROUP!`)
       }
       else if(p_text != "")
-      {
+      {   
         getStudents(setStudentsGroups);
         getFirebase(p_text, setDays_List, setWeekdays_List, setWeekdaysAdded_List);
         setCurrentGroup(p_text)
 
-      if(!selected_groups_list.includes(p_text)){
-        console.log(`NOT REPEATS> ${selected_groups_list}`)
-        var arr = selected_groups_list;
-        arr.push(p_text)
-        setSelectedGroupsList(arr)
-      }
+        if(!selected_groups_list.includes(current_group)){
+          console.log(`NOT REPEATS> ${p_text}`)
+          var arr = selected_groups_list;
+          arr.push(p_text)
+          setSelectedGroupsList(arr)
 
-      // console.log(`selected list> ${p_text}`)
-      console.log(`getDataFromFirebase> SUCCESS!`)
+        }
+
+        // console.log(`selected list> ${p_text}`)
+        console.log(`getDataFromFirebase> SUCCESS!`)
       }
       else
       {
@@ -235,62 +315,86 @@ function Main() {
       setWeekdays_List(p_list)
     }
 
+
     return (
-      <div className="Main">
+      <Context.Provider value={value_for_context}>
+          <div className="Main">
 
-        {/* {chys_znam == "znam" ?
-        <p>znam blyat </p>:
-        <p>chys syka</p>
-        } */}
+          {/* {chys_znam == "znam" ?
+          <p>znam blyat </p>:
+          <p>chys syka</p>
+          } */}
 
-        {/* <button onClick={()=>
-        {
-          localStorage.removeItem('selected_groups');
-          localStorage.removeItem('week');
-          console.log("> !!! LOCALSTORAGE DATA IS REMOVED !!!")
-        }}>clear localStorage</button> */}
+          {/* <button onClick={()=>
+          {
+            localStorage.removeItem('selected_groups');
+            localStorage.removeItem('week');
+            console.log("> !!! LOCALSTORAGE DATA IS REMOVED !!!")
+          }}>clear localStorage</button> */}
 
-        <App_Start
-        app={app}
-        setApp={setApp}
-        firebaseConfig={firebaseConfig}
-        isDaysListEmpty={isDaysListEmpty}
-        getDataFromFirebase={getDataFromFirebase}
-        setIsDaysListEmpty={setIsDaysListEmpty}
-        get_localStorage={get_localStorage}
-        setWeekChysZnam={setWeekChysZnam}
-        get_Todays_Day={get_Todays_Day}
-        />
-
-
-        <Search_Main 
-        search_modal={search_modal} 
-        setSearchModal={setSearchModal}
-        students_groups={students_groups} 
-        getDataFromFirebase={getDataFromFirebase}
-        current_group={current_group}
-        selected_groups_list={selected_groups_list}
-        setCurrentGroup={setCurrentGroup}
-        set_localStorage={set_localStorage}
-        isFirstVisit={isFirstVisit}
-        setIsFirstVisit={setIsFirstVisit}
-        />
-        <Header
-        current_group={current_group}
-        getData={getData}
-        setSearchModal={setSearchModal}
-        set_localStorage={set_localStorage}
-        />
-        <Main_Block 
-          days_list={days_list} 
-          weekdays_list={weekdays_list} 
-          weekdays_added_list={weekdays_added_list}
+          <App_Start
+          app={app}
+          setApp={setApp}
+          firebaseConfig={firebaseConfig}
           isDaysListEmpty={isDaysListEmpty}
-          chys_znam={chys_znam}
-          todays_day={todays_day}
-        />
+          getDataFromFirebase={getDataFromFirebase}
+          setIsDaysListEmpty={setIsDaysListEmpty}
+          get_localStorage={get_localStorage}
+          setWeekChysZnam={setWeekChysZnam}
+          get_Todays_Day={get_Todays_Day}
+          />
 
-      </div>
+
+          <Search_Main 
+          search_modal={search_modal} 
+          setSearchModal={setSearchModal}
+          setModalWindow={setModalWindow}
+          students_groups={students_groups} 
+          getDataFromFirebase={getDataFromFirebase}
+          current_group={current_group}
+          selected_groups_list={selected_groups_list}
+          setCurrentGroup={setCurrentGroup}
+          set_localStorage={set_localStorage}
+          isFirstVisit={isFirstVisit}
+          setIsFirstVisit={setIsFirstVisit}
+          />
+
+          <Search_Group
+          modal_window={modal_window}
+          setModalWindow={setModalWindow}
+          current_group={current_group}
+          setCurrentGroup={setCurrentGroup}
+          getDataFromFirebase={getDataFromFirebase}
+          set_localStorage={set_localStorage}
+          setIsFirstVisit={setIsFirstVisit}
+          students_groups={students_groups} 
+          setSearchModal={setSearchModal}
+          />
+
+          
+          {/* <Modal_Window
+          modal_window={modal_window}
+          setModalWindow={setModalWindow}
+          /> */}
+
+          <Header
+          current_group={current_group}
+          getData={getData}
+          setSearchModal={setSearchModal}
+          set_localStorage={set_localStorage}
+          />
+
+          <Main_Block 
+            days_list={days_list} 
+            weekdays_list={weekdays_list} 
+            weekdays_added_list={weekdays_added_list}
+            isDaysListEmpty={isDaysListEmpty}
+            chys_znam={chys_znam}
+            todays_day={todays_day}
+          />
+
+        </div>
+      </Context.Provider>
     );
   }
 

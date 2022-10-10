@@ -36,7 +36,7 @@ class Day_list extends Component {
               return <Lesson_Item
                 isEmptyDay={this.props.isEmptyDay}
                 para={this.props.para_list[index]} 
-                key={index}
+                key={`D_L:${index}`}
                 isDaysListEmpty = {this.props.isDaysListEmpty}
                 chys_znam={this.props.chys_znam}
                 todays_day={this.props.todays_day}
