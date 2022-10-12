@@ -1,6 +1,7 @@
 import React, { Component, StyleSheet } from 'react'
 
 import './brick.scss'
+import {some} from "../../firebase_fetch.js"
 
 class Brick extends Component {
   constructor(props) {
@@ -22,6 +23,8 @@ class Brick extends Component {
       await this.props.set_localStorage();
       // set var that this is NOT first visit
       await this.props.setIsFirstVisit(false);
+
+      // setTimeout(async ()=>{ await some()},1000)
     }
   }
 

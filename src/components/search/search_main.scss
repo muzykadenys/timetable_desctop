@@ -43,6 +43,8 @@ $b_5:#f2ebe7;
     max-height: 100%;
     z-index: 99;
     position: fixed;
+    margin-top: -30px;
+    transition: all 0.4s ease;
 
     .ss_wrapper{
         padding: 40px 5%;
@@ -54,7 +56,8 @@ $b_5:#f2ebe7;
         margin-bottom: 40px;
         border-radius: 5px;
         box-shadow: 0px 0px 80px rgba(0,0,0,0.15);
-        
+        position: absolute;
+        // transition: all 0.4s ease;
 
         .ss_header{
             display: flex;
@@ -111,12 +114,18 @@ $b_5:#f2ebe7;
             }
         }
         
+        
     }
+
 }
 .search_section.active{
     opacity: 1;
     visibility: visible;
+    margin-top: 0px;
+
 }
+
+
 
 // =========================================================================================================
 
@@ -129,7 +138,7 @@ $b_5:#f2ebe7;
         width: 100%;
         display: grid;
         justify-items: center;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-row-gap: 25px;
     }
 

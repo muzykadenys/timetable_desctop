@@ -3,6 +3,7 @@ import '../index.css'
 
 import {test, getFirebase, getStudents, writeWeekFirebase, getWeekFirebase} from './firebase_fetch.js'
 
+
 import App_Start from './App_Start';
 import Search_Main from './search/Search_Main.js';
 import Header from './header/Header'
@@ -231,8 +232,9 @@ function Main() {
         const j_obj = JSON.parse(obj);
         const obj_week = localStorage.getItem('week');
       
-        setSelectedGroupsList(j_obj.all)
+        
         setCurrentGroup(j_obj.last)
+        setSelectedGroupsList(j_obj.all)
         getDataFromFirebase(j_obj.last)
 
         if(obj_week){
@@ -275,13 +277,14 @@ function Main() {
         getFirebase(p_text, setDays_List, setWeekdays_List, setWeekdaysAdded_List);
         setCurrentGroup(p_text)
 
-        if(!selected_groups_list.includes(current_group)){
+        if(!selected_groups_list.includes(p_text)){
           console.log(`NOT REPEATS> ${p_text}`)
           var arr = selected_groups_list;
           arr.push(p_text)
           setSelectedGroupsList(arr)
 
         }
+
 
         // console.log(`selected list> ${p_text}`)
         console.log(`getDataFromFirebase> SUCCESS!`)
@@ -391,6 +394,7 @@ function Main() {
             isDaysListEmpty={isDaysListEmpty}
             chys_znam={chys_znam}
             todays_day={todays_day}
+            
           />
 
         </div>

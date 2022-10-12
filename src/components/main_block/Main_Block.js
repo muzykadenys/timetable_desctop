@@ -1,10 +1,12 @@
-import React, { Component, useContext, useState } from 'react'
+import React, { Component, useContext, useState, useEffect, useRef } from 'react'
 import './main_block.scss'
+import { gsap } from "gsap";
 
 import Day_list from './day_list/Day_List'
 import {Context} from '../../context'
 
 function Main_Block(props){
+  // const day_el = useRef(null);
   const {
     getSearchModal,
     setSearchModal,
@@ -33,10 +35,15 @@ function Main_Block(props){
     "пятниця"
    ]
 
+  //  useEffect(()=>{
+  //   gsap.to(day_el.current, {y: 100, duration: 1});
+  
+  //  },[day_el])
+
   return (
     <div className='main_wrapper' >
 
-      <div className='main_block_section' id='main_block_section'>
+      <div  className='main_block_section' id='main_block_section'>
         {    getWeekdaysAdded_List().map((elem, index) => {
 
         if (!elem.includes("cum_"))
@@ -44,11 +51,12 @@ function Main_Block(props){
           let local_index =     getWeekdays_List().indexOf(`${elem}`)
           // let local_index = index
           
-          return <Day_list className="aga"
+          return <Day_list className="aga" 
           isEmptyDay={false}
           weekday={    getWeekdays_List()[local_index]}
           para_list={    getDays_List()[local_index]}
           key={`M_B_1:${local_index}`}
+          ind={index}
           isDaysListEmpty = {    getIsDaysListEmpty()}
           chys_znam={    getChysZnam()}
           todays_day={    getTodaysDay()}
@@ -61,6 +69,7 @@ function Main_Block(props){
           weekday={elem.replace("cum_", "")}
           isEmptyDay={true}
           key={`M_B_2:${index}`}
+          ind={index}
           chys_znam={    getChysZnam()}
           todays_day={    getTodaysDay()}
           />

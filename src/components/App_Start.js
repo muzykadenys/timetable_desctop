@@ -2,7 +2,6 @@ import React, { Component, useState, useEffect, useContext} from 'react'
 import {initializeApp} from "firebase/app"
 import { Context } from '../context';
 
-
 function App_Start(props){
     const {
       setIsDaysListEmpty, 

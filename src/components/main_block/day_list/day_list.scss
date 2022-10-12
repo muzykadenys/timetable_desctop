@@ -46,6 +46,13 @@ $b_6: #d7c3af;
         flex-direction: column;
         align-items: center;
         width: 100%;
+
+        .day_wrapper_2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
     }
 
 
@@ -60,7 +67,9 @@ $b_6: #d7c3af;
         // scroll-snap-type: x mandatory;
         .day_wrapper{
             width: 100vw;
-            
+            .day_wrapper_2{
+                width: 100vh;
+            }
         }
     }
     

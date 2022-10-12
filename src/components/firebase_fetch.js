@@ -1,5 +1,36 @@
+import { async } from "@firebase/util";
 import { getDatabase, ref, child, get, set } from "firebase/database";
+// import { gsap } from "gsap";
 
+
+// export async function some(){
+//     const header = await gsap.timeline({defaults: {duration: 0.7}});
+//     // gsap.utils.toArray(".bigCardWrapper").forEach(async (el, i) => {
+
+//     //     await gsap.from(el, {opacity: 0, y: -20});
+//     // })
+//     await header.from('.bigCardWrapper', {opacity: 0, y: -20,stagger: 0.05 })
+// }
+// some()
+
+// var style = document.createElement('style');
+// style.innerHTML = `
+// .bigCardWrapper{
+//     width: 100%;
+//     animation:stagger ease-in 1s forwards 1;
+// }
+// @keyframes stagger{
+//     from{
+//         opacity: 0;
+//         // border: 8px solid black;
+//     }
+//     to{
+//         // border: attr(ops) solid pink;
+//         opacity: attr(ops);
+//     }
+// }
+// `;
+// document.head.appendChild(style);
 
 
 export function getFirebase(p_text, p_set_days_list, p_set_weekdays_list, p_set_weekdays_added_list){

@@ -34,6 +34,7 @@ $b_5:#f2ebe7;
     justify-content: space-between;
     width: 100%;
 
+
     .modalWindow_main_head_form{
         display: flex;
         justify-content: space-between;
@@ -84,5 +85,45 @@ $b_5:#f2ebe7;
     .modalWindow_main_scroll_variants{
         // width: 90%;
         @extend %grid_bricks; 
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    %grid_bricks_2{
+        // background-color: pink;
+        padding: 0px 4%;
+        width: 100%;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 25px;
+    }
+
+
+
+    .modalWindow_main_head{
+    
+        .modalWindow_main_head_form{
+
+            .modalWindow_main_head-back_btn{
+                font-size: 16px;
+            }
+    
+            .modalWindow_main_head_form-input{
+                width: 60%;
+            }
+
+        }
+    }
+
+
+
+    .modalWindow_main_scroll{
+    
+        .modalWindow_main_scroll_variants{
+            @extend %grid_bricks_2; 
+        }
     }
 }

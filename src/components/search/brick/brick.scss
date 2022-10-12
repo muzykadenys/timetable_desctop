@@ -17,7 +17,8 @@ $b_4:#e8ded4;
 $b_5:#f2ebe7;
 
 .brick_section{
-    
+    transition: all 0.4s ease;
+
     .bs_wrapper{
         display: flex;
         justify-content: center;
@@ -27,10 +28,42 @@ $b_5:#f2ebe7;
         width: 85px;
         height: 35px;
         cursor: pointer;
-
+    transition: all 0.4s ease;
         .title{
             font-weight: 500;
             font-size: 15px;
+        }
+    }
+}
+
+.brick_section{
+    animation:stagger ease-in 0.3s forwards 1;
+}
+@keyframes stagger{
+    from{
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .brick_section{
+        transition: all 0.4s ease;
+        .bs_wrapper{
+
+            width: 60px;
+            height: 30px;
+
+            .title{
+                font-weight: 500;
+                font-size: 13px;
+            }
         }
     }
 }

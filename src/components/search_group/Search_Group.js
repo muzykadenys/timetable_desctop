@@ -103,7 +103,7 @@ function Search_Group(props){
                            handleSubmit();
                     }}>
                        <div className='modalWindow_main_head-back_btn' onClick={()=>     setModalWindow(false)}>{`🚪`}</div> 
-                        <input className='modalWindow_main_head_form-input' type="text" value={   input_val} onChange={(e)=>{   handleChange(e)}} />
+                        <input className='modalWindow_main_head_form-input' type="text" value={input_val} onChange={(e)=>{   handleChange(e)}} />
                         <input className='modalWindow_main_head_form-submit' type="submit" value="🔎" />
                         {/* <button onClick={(e)=>{console.log(`>>>${   state.input_val.toUpperCase()}`); e.preventDefault();}}>cock</button> */}
                     </form>

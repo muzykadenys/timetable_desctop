@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
+import { gsap } from "gsap";
 
 import "./lesson_item.scss"
-
+// import {some} from "../../firebase_fetch.js"
 
 class Lesson_Item extends Component {
 
     constructor (props){
         super(props)
 
+        this.card_el = React.createRef(null);
         this.state = {
             clsAddition_chys : "----",
-            clsAddition_znam : "----"
+            clsAddition_znam : "----",
         }
     }
 
@@ -46,7 +48,7 @@ class Lesson_Item extends Component {
     // 1 kind of sticker ------------------------------------------------------------------------------------------------------
     layout_1 (){
         return (
-            <li className='layout_1'>
+            <li className='layout_1 layout_item'>
                 
               {this.layout_header()}
 
@@ -74,7 +76,7 @@ class Lesson_Item extends Component {
         if(this.props.para.text.length === 1 && this.props.para.type.includes("group_chys")){
 
             return (
-                <li className='layout_2'>
+                <li className='layout_2 layout_item'>
                     
                   {this.layout_header()}
                   
@@ -106,7 +108,7 @@ class Lesson_Item extends Component {
         else if(this.props.para.text.length === 1 && this.props.para.type.includes("group_znam")){
 
             return (
-                <li className='layout_2'>
+                <li className='layout_2 layout_item'>
                     
                   {this.layout_header()}
                   
@@ -136,7 +138,7 @@ class Lesson_Item extends Component {
          // if both blocks is exist
         else{
             return (
-                <li className='layout_2'>
+                <li className='layout_2 layout_item'>
                     
                   {this.layout_header()}
                   
@@ -177,7 +179,7 @@ class Lesson_Item extends Component {
         // if left sub block exist
         if(this.props.para.text.length === 1 && this.props.para.type.includes("sub_1_full")){
             return (
-                <li className='layout_3'>
+                <li className='layout_3 layout_item'>
                     
                   {this.layout_header()}
                   
@@ -213,7 +215,7 @@ class Lesson_Item extends Component {
         }
         else if(this.props.para.text.length === 1 && this.props.para.type.includes("sub_2_full")){
             return (
-                <li className='layout_3'>
+                <li className='layout_3 layout_item'>
                     
                   {this.layout_header()}
                   
@@ -249,7 +251,7 @@ class Lesson_Item extends Component {
         }
         else if(this.props.para.text.length === 2 && this.props.para.type.includes("sub_2_full")){
             return (
-                <li className='layout_3'>
+                <li className='layout_3 layout_item'>
                     
                   {this.layout_header()}
                   
@@ -359,7 +361,7 @@ class Lesson_Item extends Component {
 
         if(true){
             return (
-                <li className='layout_4'>
+                <li className='layout_4 layout_item'>
                     
                   {this.layout_header()}
                   
@@ -442,7 +444,7 @@ class Lesson_Item extends Component {
         if (is_chys_znam == "chys") {
             return(
                 <React.Fragment>
-                    <section className='lil_main_1'>
+                    <section className={`lil_main_1 ${this.state.clsAddition_chys}`}>
                     <p className='lil_t_1'>{`${arr[0].title.slice(0,28)}...`}</p>
                     <p className='lil_t_2'>{`${arr[0].teacher.slice(0,28)}...`}</p>
     
@@ -470,9 +472,9 @@ class Lesson_Item extends Component {
                 <React.Fragment>
                     <section className='lil_main_2 no-radius'>
                     
-                    {this.l_5_subs("lil_sub_1 lil_sub", 0, arr)}
+                    {this.l_5_subs(`lil_sub_1 lil_sub  ${this.state.clsAddition_chys}`, 0, arr)}
 
-                    {this.l_5_subs("lil_sub_2 lil_sub", 1, arr)}
+                    {this.l_5_subs(`lil_sub_2 lil_sub  ${this.state.clsAddition_chys}`, 1, arr)}
                    
                   </section>
                     <section className={`lil_main_1 ${this.state.clsAddition_znam}`}>
@@ -540,7 +542,7 @@ class Lesson_Item extends Component {
 
         if(true){
             return (
-                <li className='layout_5'>
+                <li className='layout_5 layout_item'>
                     
                 {this.layout_header()}
                 
@@ -590,7 +592,7 @@ class Lesson_Item extends Component {
         if (is_left_right == "left") {
             return(
                 <div className='lil_wrapper_6'>
-                    <section className='lil_main_6_1 lil_main_6 lil_left'>
+                    <section className={`lil_main_6_1 lil_main_6 lil_left ${this.state.clsAddition_chys}`}>
                         <p className='lil_t_1'>{`${arr[0].title.slice(0,13)}...`}</p>
                         <p className='lil_t_2'>{`${arr[0].teacher.slice(0,13)}...`}</p>
 
@@ -604,7 +606,7 @@ class Lesson_Item extends Component {
                     </section>
     
                     <section className='lil_main_6_2 lil_main_6 lil_right'>
-                        {this.l_6_subs('lil_sub_6_1 lil_sub_6', 1, arr)}
+                        {this.l_6_subs(`lil_sub_6_1 lil_sub_6  ${this.state.clsAddition_chys}`, 1, arr)}
 
                         {this.l_6_subs(`lil_sub_6_2 lil_sub_6  ${this.state.clsAddition_znam}`, 2, arr)}
                         
@@ -617,7 +619,7 @@ class Lesson_Item extends Component {
                 <div className='lil_wrapper_6'>
 
                     <section className='lil_main_6_2 lil_main_6 lil_left'>
-                        {this.l_6_subs('lil_sub_6_1 lil_sub_6', 0, arr)}
+                        {this.l_6_subs(`lil_sub_6_1 lil_sub_6  ${this.state.clsAddition_chys}`, 0, arr)}
 
                         {this.l_6_subs(`lil_sub_6_2 lil_sub_6  ${this.state.clsAddition_znam}`, 1, arr)}
                         
@@ -688,7 +690,7 @@ class Lesson_Item extends Component {
 
         if(true){
             return (
-                <li className='layout_6'>
+                <li className='layout_6 layout_item'>
                     
                 {this.layout_header()}
                 
@@ -705,7 +707,7 @@ class Lesson_Item extends Component {
     r(){
         return (
             
-            <li className='lesson_item_empty'>
+            <li className='lesson_item_empty layout_item'>
                 <div className='lil_top'>
                     <p className='lil_time'></p>
                     <p className='lil_type'>пусто</p>
@@ -717,7 +719,7 @@ class Lesson_Item extends Component {
     r_error(){
         return (
             
-            <li className='lesson_item_empty'>
+            <li className='lesson_item_empty layout_item'>
                 <div className='lil_top'>
                     <p className='lil_time'></p>
                     <p className='lil_type'>пусто</p>
@@ -732,7 +734,7 @@ class Lesson_Item extends Component {
     r_blyat(){
         return (
             
-            <li className='lesson_item_empty'>
+            <li className='lesson_item_empty layout_item'>
                 <div className='lil_top'>
                     <p className='lil_time'></p>
                     <p className='lil_type'>пусто</p>
@@ -862,35 +864,50 @@ class Lesson_Item extends Component {
 
         // const weekday = ["неділя","понеділок","вівторок","середа","четвер","п'ятниця","субота"];
 
+        // const scroll_week = 
+        // {
+        //     "понеділок": 100,
+        //     "вівторок": 400,
+        //     "середа": 600,
+        //     "четвер": 1000,
+        //     "п'ятниця": 1300,
+        //     "субота": 1600
+        // }
+        const p_width = window.innerWidth;
         const scroll_week = 
         {
-            "понеділок": 100,
-            "вівторок": 400,
-            "середа": 600,
-            "четвер": 1000,
-            "п'ятниця": 1300,
-            "субота": 1600
+            "понеділок": 0,
+            "вівторок": p_width ,
+            "середа": p_width * 2,
+            "четвер": p_width * 3,
+            "п'ятниця": p_width * 4,
+            "субота": p_width * 5
         }
 
-        console.log(`manual scroll> --- ${this.props.todays_day}`)
+        // console.log(`manual scroll> --- ${this.props.todays_day}`)
         document.getElementById('main_block_section').scroll({
           behavior: 'smooth',
+        //   left: p_width * 1
           left: scroll_week[`${this.props.todays_day}`],
           
         });
     }
 
+
     componentDidMount(){
         this.add_cls_chys_znam()
-
+        
         this.manualScroll()
+        
     }
+
 
   render() {
     if(!this.props.isDaysListEmpty){
+
         return this.layout_manager()
-        // return this.layout_1()
     }else{
+
         return this.r()
     }
   }
