@@ -17,7 +17,10 @@ $b_4:#e8ded4;
 $b_5:#f2ebe7;
 
 
-$max_width_stikcer: 260px;
+$max_width_stikcer: 340px;
+$max_width_stikcer_mobile: 290px;
+
+
 $card_split_margin: 2.5px;
 
 %sticker_paddings{
@@ -658,4 +661,10 @@ $card_split_margin: 2.5px;
         font-weight: 500;
     }
 
+}
+
+
+@media screen and (max-width: 768px) {
+
+    
 }
