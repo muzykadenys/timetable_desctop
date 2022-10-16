@@ -1,34 +1,4 @@
-$g_1:#1c1c1e;
-$g_2: #2c2c2e;
-$g_3:#3a3a3c;
-$g_4: #48484a;
-$g_5:#636365;
-$g_6: #8f8e92;
-$g_7:#aeadb1;
-$g_8: #c8c7cb;
-$g_9:#d2d1d6;
-$g_1-0: #f3f2f7;
-$y_1:#ffde8a;
-$y_2:#ffe6a9;
-$b_1:#35271c;
-$b_2:#4c3729;
-$b_3:#684f3e;
-$b_4:#e8ded4;
-$b_5:#f2ebe7;
-
-%grid_bricks{
-    // background-color: pink;
-    padding: 0px 4%;
-    width: 100%;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(9, 1fr);
-    grid-row-gap: 25px;
-}
-
-
-//                                                                                                                              
-
+@import '../settings.scss';
 
 
 .search_section{
@@ -85,7 +55,7 @@ $b_5:#f2ebe7;
                 margin-bottom: 60px;
     
                 .choosen_bricks{
-                    @extend %grid_bricks; 
+                    @include grid_bricks_9; 
                 }
     
                 .selected_empty_text{
@@ -108,7 +78,7 @@ $b_5:#f2ebe7;
     
                 .variants{
                     height: 100%;
-                    @extend %grid_bricks;
+                    @include grid_bricks_9;
                     // scroll-snap-type: y mandatory;
                 }
             }
@@ -128,47 +98,138 @@ $b_5:#f2ebe7;
 
 
 // =========================================================================================================
+@media screen and (max-width: $adaptive_m_3) and (min-width: $adaptive_m_2) {
 
+    .search_section .ss_wrapper .ss_scroll_wrapper{
 
-@media screen and (max-width: 768px) {
+        .choosen_bricks_wrapper{
 
-    %grid_bricks_2{
-        // background-color: pink;
-        padding: 0px 4%;
-        width: 100%;
-        display: grid;
-        justify-items: center;
-        grid-template-columns: repeat(3, 1fr);
-        grid-row-gap: 25px;
-    }
-
-    .search_section{
-       
-        .ss_wrapper{
-            .ss_scroll_wrapper{
-                .choosen_bricks_wrapper{
-
-                    .choosen_bricks{
-                        @extend %grid_bricks_2; 
-                    }
-    
-                    .selected_empty_text{
-                        font-size: 24px;
-                        font-weight: 600;
-                        color: $b_4;
-                    }
-                }
-        
-                .variants_wrapper{
-                    height: 90%;
-    
-                    .variants{
-                        @extend %grid_bricks_2;
-    
-                    }
-                }
+            .choosen_bricks{
+                @include grid_bricks_7; 
             }
-            
+
+            .selected_empty_text{
+                font-size: 24px;
+                font-weight: 600;
+                color: $b_4;
+            }
+        }
+
+        .variants_wrapper{
+            height: 90%;
+
+            .variants{
+                @include grid_bricks_7;
+
+            }
+        }
+    }
+}
+@media screen and (max-width: $adaptive_m_2) and (min-width: $adaptive_m) {
+
+    .search_section .ss_wrapper .ss_scroll_wrapper{
+
+        .choosen_bricks_wrapper{
+
+            .choosen_bricks{
+                @include grid_bricks_5; 
+            }
+
+            .selected_empty_text{
+                font-size: 24px;
+                font-weight: 600;
+                color: $b_4;
+            }
+        }
+
+        .variants_wrapper{
+            height: 90%;
+
+            .variants{
+                @include grid_bricks_5;
+
+            }
+        }
+    }
+}
+@media screen and (max-width: $adaptive_m) and (min-width: $adaptive_s) {
+
+    .search_section .ss_wrapper .ss_scroll_wrapper{
+
+        .choosen_bricks_wrapper{
+
+            .choosen_bricks{
+                @include grid_bricks_4; 
+            }
+
+            .selected_empty_text{
+                font-size: 24px;
+                font-weight: 600;
+                color: $b_4;
+            }
+        }
+
+        .variants_wrapper{
+            height: 90%;
+
+            .variants{
+                @include grid_bricks_4;
+
+            }
+        }
+    }
+}
+@media screen and (max-width: $adaptive_s) {
+
+    .search_section .ss_wrapper .ss_scroll_wrapper{
+
+        .choosen_bricks_wrapper{
+
+            .choosen_bricks{
+                @include grid_bricks_4; 
+            }
+
+            .selected_empty_text{
+                font-size: 24px;
+                font-weight: 600;
+                color: $b_4;
+            }
+        }
+
+        .variants_wrapper{
+            height: 90%;
+
+            .variants{
+                @include grid_bricks_4;
+
+            }
+        }
+    }
+}
+@media screen and (max-width: $adaptive_s_-1) {
+
+    .search_section .ss_wrapper .ss_scroll_wrapper{
+
+        .choosen_bricks_wrapper{
+
+            .choosen_bricks{
+                @include grid_bricks_3; 
+            }
+
+            .selected_empty_text{
+                font-size: 24px;
+                font-weight: 600;
+                color: $b_4;
+            }
+        }
+
+        .variants_wrapper{
+            height: 90%;
+
+            .variants{
+                @include grid_bricks_3;
+
+            }
         }
     }
 }

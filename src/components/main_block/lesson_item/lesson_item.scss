@@ -1,24 +1,7 @@
-$g_1:#1c1c1e;
-$g_2: #2c2c2e;
-$g_3:#3a3a3c;
-$g_4: #48484a;
-$g_5:#636365;
-$g_6: #8f8e92;
-$g_7:#aeadb1;
-$g_8: #c8c7cb;
-$g_9:#d2d1d6;
-$g_1-0: #f3f2f7;
-$y_1:#ffe68a;
-$y_2:#ffeea9;
-$b_1:#35271c;
-$b_2:#4c3729;
-$b_3:#684f3e;
-$b_4:#e8ded4;
-$b_5:#f2ebe7;
 
+@import '../../settings.scss';
 
-$max_width_stikcer: 340px;
-$max_width_stikcer_mobile: 290px;
+$max_width_stikcer: 80vw;
 
 
 $card_split_margin: 2.5px;
@@ -35,6 +18,41 @@ $card_split_margin: 2.5px;
     background-color: $b_5;
 }
 // ===============================================================================================================
+
+//header ------------------------------------------------------------------------------------------------------------
+// top bar of sticker
+.lil_top{
+    background-color: $y_2;
+    display: flex;
+    justify-content: space-between;
+    max-height: 30px;
+    @extend %sticker_paddings;
+    align-items: center;
+
+    .lil_time{
+
+        font-size: 10px;
+        font-weight: 500;
+        width: 33%;
+        white-space: nowrap;
+    }
+    .lil_type{
+        display: inline;
+        font-size: 10px;
+        font-weight: 600;
+        width: 33%;
+        text-align: center;
+        padding-left: -10px;
+    }
+    .lil_para{
+        width: 33%;
+        text-align: end;
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+}
+
 .lesson_item{
     background-color: $y_1;
     margin: 10px;
@@ -629,42 +647,18 @@ $card_split_margin: 2.5px;
     }
 }
 
-//header ------------------------------------------------------------------------------------------------------------
-// top bar of sticker
-.lil_top{
-    background-color: $y_2;
-    display: flex;
-    justify-content: space-between;
-    max-height: 30px;
-    @extend %sticker_paddings;
-    align-items: center;
-
-    .lil_time{
-
-        font-size: 10px;
-        font-weight: 500;
-        width: 33%;
-        white-space: nowrap;
+@media screen and (max-width: $adaptive_m) and (min-width: $adaptive_s) {
+    .lil_top{
+    
+        .lil_type{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 5ch;
+            margin-left: 6px;
+        }
     }
-    .lil_type{
-        display: inline;
-        font-size: 10px;
-        font-weight: 600;
-        width: 33%;
-        text-align: center;
-        padding-left: -10px;
-    }
-    .lil_para{
-        width: 33%;
-        text-align: end;
-        font-size: 10px;
-        font-weight: 500;
-    }
-
 }
 
-
-@media screen and (max-width: 768px) {
-
-    
+@media screen and (max-width: $adaptive_s) {
 }

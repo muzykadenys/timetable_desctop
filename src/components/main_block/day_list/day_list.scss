@@ -1,21 +1,4 @@
-$g_1:#1c1c1e;
-$g_2: #2c2c2e;
-$g_3:#3a3a3c;
-$g_4: #48484a;
-$g_5:#636365;
-$g_6: #8f8e92;
-$g_7:#aeadb1;
-$g_8: #c8c7cb;
-$g_9:#d2d1d6;
-$g_1-0: #f3f2f7;
-$y_1:#ffe68a;
-$y_2:#ffeea9;
-$b_1:#35271c;
-$b_2:#4c3729;
-$b_3:#684f3e;
-$b_4:#e8ded4;
-$b_5:#f2ebe7;
-$b_6: #d7c3af;
+@import '../../settings.scss';
 
 .day_list{
     list-style: none;
@@ -61,7 +44,7 @@ $b_6: #d7c3af;
 
 // =========================================================================================================
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $adaptive_s) {
     .day_list{
         scroll-snap-align: center;
         // scroll-snap-type: x mandatory;
@@ -72,5 +55,4 @@ $b_6: #d7c3af;
             }
         }
     }
-    
 }

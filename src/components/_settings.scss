@@ -1,0 +1,62 @@
+$g_1:#1c1c1e;
+$g_2: #2c2c2e;
+$g_3:#3a3a3c;
+$g_4: #48484a;
+$g_5:#636365;
+$g_6: #8f8e92;
+$g_7:#aeadb1;
+$g_8: #c8c7cb;
+$g_9:#d2d1d6;
+$g_1-0: #f3f2f7;
+$y_1:#ffe68a;
+$y_2:#ffeea9;
+$b_1:#35271c;
+$b_2:#4c3729;
+$b_3:#684f3e;
+$b_4:#e8ded4;
+$b_5:#f2ebe7;
+$b_6: #d7c3af;
+
+$adaptive_s_-1: 480px;
+$adaptive_s: 1000px;
+$adaptive_m: 1180px;
+$adaptive_m_2: 1280px;
+$adaptive_m_3: 1400px;
+
+
+@mixin grid{
+    padding: 0px 4%;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    grid-row-gap: 25px;
+}
+
+@mixin grid_bricks_9{
+    @include grid;
+    grid-template-columns: repeat(9, 1fr);
+
+}
+
+@mixin grid_bricks_7{
+    @include grid;
+    grid-template-columns: repeat(7, 1fr);
+
+}
+
+@mixin grid_bricks_5{
+    @include grid;
+    grid-template-columns: repeat(6, 1fr);
+
+}
+@mixin grid_bricks_4{
+    @include grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+@mixin grid_bricks_3{
+    @include grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}

@@ -1,3 +1,5 @@
+@import '../settings.scss';
+
 .main_wrapper{
     // transform: rotateX(180deg);
 
@@ -12,7 +14,7 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $adaptive_s) {
     .main_wrapper{
         .main_block_section{
             overflow-x: auto;

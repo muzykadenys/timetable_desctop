@@ -207,7 +207,7 @@ function Main() {
 
         console.log(`= setWeekChysZnam> ${res}`)
         setChysZnam(res)
-        writeWeekFirebase(res) // write changes in firebase
+        // writeWeekFirebase(res) // write changes in firebase
       }
       else{
         if(obj_week.includes('chys')){

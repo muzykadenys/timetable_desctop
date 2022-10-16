@@ -1,32 +1,5 @@
-$g_1:#1c1c1e;
-$g_2: #2c2c2e;
-$g_3:#3a3a3c;
-$g_4: #48484a;
-$g_5:#636365;
-$g_6: #8f8e92;
-$g_7:#aeadb1;
-$g_8: #c8c7cb;
-$g_9:#d2d1d6;
-$g_1-0: #f3f2f7;
-$y_1:#ffde8a;
-$y_2:#ffe6a9;
-$b_1:#35271c;
-$b_2:#4c3729;
-$b_3:#684f3e;
-$b_4:#e8ded4;
-$b_5:#f2ebe7;
-
-%grid_bricks{
-    // background-color: pink;
-    padding: 0px 4%;
-    width: 100%;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(9, 1fr);
-    grid-row-gap: 25px;
-}
-
-//                                                                                                                              
+@import '../settings.scss';
+                                                                                                                         
 
 
 .modalWindow_main_head{
@@ -84,46 +57,100 @@ $b_5:#f2ebe7;
 
     .modalWindow_main_scroll_variants{
         // width: 90%;
-        @extend %grid_bricks; 
+        @include grid_bricks_9; 
     }
 }
 
 
-@media screen and (max-width: 768px) {
 
-    %grid_bricks_2{
-        // background-color: pink;
-        padding: 0px 4%;
-        width: 100%;
-        display: grid;
-        justify-items: center;
-        grid-template-columns: repeat(3, 1fr);
-        grid-row-gap: 25px;
+
+@media screen and (max-width: $adaptive_m_3) and (min-width: $adaptive_m_2) {
+    .modalWindow_main_head .modalWindow_main_head_form{
+
+        .modalWindow_main_head-back_btn{
+            font-size: 16px;
+        }
+
+        .modalWindow_main_head_form-input{
+            width: 60%;
+        }
+
     }
 
+    .modalWindow_main_scroll .modalWindow_main_scroll_variants{
+        @include grid_bricks_7; 
+    }
+}
+@media screen and (max-width: $adaptive_m_2) and (min-width: $adaptive_m) {
 
+    .modalWindow_main_head .modalWindow_main_head_form{
 
-    .modalWindow_main_head{
-    
-        .modalWindow_main_head_form{
-
-            .modalWindow_main_head-back_btn{
-                font-size: 16px;
-            }
-    
-            .modalWindow_main_head_form-input{
-                width: 60%;
-            }
-
+        .modalWindow_main_head-back_btn{
+            font-size: 16px;
         }
+
+        .modalWindow_main_head_form-input{
+            width: 60%;
+        }
+
     }
 
+    .modalWindow_main_scroll .modalWindow_main_scroll_variants{
+        @include grid_bricks_5; 
+    }
+}
+@media screen and (max-width: $adaptive_m) and (min-width: $adaptive_s) {
 
+    .modalWindow_main_head .modalWindow_main_head_form{
 
-    .modalWindow_main_scroll{
-    
-        .modalWindow_main_scroll_variants{
-            @extend %grid_bricks_2; 
+        .modalWindow_main_head-back_btn{
+            font-size: 16px;
         }
+
+        .modalWindow_main_head_form-input{
+            width: 60%;
+        }
+
+    }
+
+    .modalWindow_main_scroll .modalWindow_main_scroll_variants{
+        @include grid_bricks_4; 
+    }
+}
+@media screen and (max-width: $adaptive_s) {
+
+    .modalWindow_main_head .modalWindow_main_head_form{
+
+        .modalWindow_main_head-back_btn{
+            font-size: 16px;
+        }
+
+        .modalWindow_main_head_form-input{
+            width: 60%;
+        }
+
+    }
+
+    .modalWindow_main_scroll .modalWindow_main_scroll_variants{
+        @include grid_bricks_4; 
+    }
+      
+}
+@media screen and (max-width: $adaptive_s_-1) {
+
+    .modalWindow_main_head .modalWindow_main_head_form{
+
+        .modalWindow_main_head-back_btn{
+            font-size: 16px;
+        }
+
+        .modalWindow_main_head_form-input{
+            width: 60%;
+        }
+
+    }
+
+    .modalWindow_main_scroll .modalWindow_main_scroll_variants{
+        @include grid_bricks_3; 
     }
 }

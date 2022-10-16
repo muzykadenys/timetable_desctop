@@ -11,8 +11,11 @@ class Lesson_Item extends Component {
 
         this.card_el = React.createRef(null);
         this.state = {
-            clsAddition_chys : "----",
-            clsAddition_znam : "----",
+            // clsAddition_chys : "----",
+            // clsAddition_znam : "----",
+
+            clsAddition_chys : `${this.props.chys_znam}` == "chys" ? "chys" : "----",
+            clsAddition_znam : `${this.props.chys_znam}` == "znam" ? "znam" : "----",
         }
     }
 
@@ -895,7 +898,7 @@ class Lesson_Item extends Component {
 
 
     componentDidMount(){
-        this.add_cls_chys_znam()
+        // this.add_cls_chys_znam()
         
         this.manualScroll()
         
