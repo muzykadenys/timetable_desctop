@@ -25,7 +25,7 @@ const firebaseConfig = {
     appId: "1:819973348577:web:7ccfc154e279ad0d07eba0",
     measurementId: "G-EK8NHWB35D"
   };
-  function getFirebaseConfig(){return firebaseConfig}
+function getFirebaseConfig(){return firebaseConfig}
 
 function Main() {
     // list with all days temetable
