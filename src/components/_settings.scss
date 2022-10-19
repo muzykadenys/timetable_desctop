@@ -34,13 +34,13 @@ $adaptive_m_3: 1400px;
 
 @mixin grid_bricks_9{
     @include grid;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(7, 1fr);
 
 }
 
 @mixin grid_bricks_7{
     @include grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(6, 1fr);
 
 }
 
@@ -51,12 +51,12 @@ $adaptive_m_3: 1400px;
 }
 @mixin grid_bricks_4{
     @include grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
 }
 
 @mixin grid_bricks_3{
     @include grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
 }

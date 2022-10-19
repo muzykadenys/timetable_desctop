@@ -38,13 +38,19 @@ function Search_Group(props){
         .toUpperCase();
         
 
-        if(buf_val.split("-").length - 1 >= 2)
-        {
-            buf_val = input_val
-        }
-        else
-        {
-               setInputVal(`${buf_val}`)
+        // if(buf_val.split("-").length - 1 >= 2)
+        // {
+        //     buf_val = input_val
+        // }
+        // else
+        // {
+        //        setInputVal(`${buf_val}`)
+        // }
+
+        if( buf_val[buf_val.length - 1] == "-" && Number.isInteger(parseInt(buf_val[buf_val.length - 2])) ){
+
+        }else{
+            setInputVal(`${buf_val}`)
         }
 
 
