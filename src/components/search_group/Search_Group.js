@@ -1,4 +1,4 @@
-import React, { Component, useContext, useState } from 'react'
+import React, { Component, useContext, useState, useRef, useEffect } from 'react'
 import Modal_Window from '../modal_window/Modal_Window';
 import Brick from '../search/brick/Brick';
 
@@ -7,6 +7,7 @@ import {Context} from '../../context'
 
 
 function Search_Group(props){
+    let inputRef = useRef(null)
     const {
         getSearchModal,
         setSearchModal,
@@ -95,6 +96,16 @@ function Search_Group(props){
         setModalWindow(prop)
     }
 
+
+
+    useEffect(()=>{
+        if(getModalWindow() && inputRef != null){
+            console.log("WHY THIS IST FOCUS")
+            inputRef.current.focus()
+        }
+    }, [getModalWindow()])
+    
+
     return (
         <Modal_Window 
             modal_window={getModalWindow()}
@@ -109,8 +120,8 @@ function Search_Group(props){
                            handleSubmit();
                     }}>
                        <div className='modalWindow_main_head-back_btn' onClick={()=>     setModalWindow(false)}>{`🚪`}</div> 
-                        <input className='modalWindow_main_head_form-input' type="text" value={input_val} onChange={(e)=>{   handleChange(e)}} />
-                        <input className='modalWindow_main_head_form-submit' type="submit" value="🔎" />
+                        <input ref={inputRef} className='modalWindow_main_head_form-input' type="text" value={input_val} onChange={(e)=>{   handleChange(e)}} />
+                        <input className='modalWindow_main_head_form-submit'  type="submit" value="🔎" />
                         {/* <button onClick={(e)=>{console.log(`>>>${   state.input_val.toUpperCase()}`); e.preventDefault();}}>cock</button> */}
                     </form>
                 </div>
