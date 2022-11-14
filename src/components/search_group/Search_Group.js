@@ -39,14 +39,6 @@ function Search_Group(props){
         .toUpperCase();
         
 
-        // if(buf_val.split("-").length - 1 >= 2)
-        // {
-        //     buf_val = input_val
-        // }
-        // else
-        // {
-        //        setInputVal(`${buf_val}`)
-        // }
 
         if( buf_val[buf_val.length - 1] == "-" && Number.isInteger(parseInt(buf_val[buf_val.length - 2])) ){
 
@@ -120,7 +112,7 @@ function Search_Group(props){
                            handleSubmit();
                     }}>
                        <div className='modalWindow_main_head-back_btn' onClick={()=>     setModalWindow(false)}>{`🚪`}</div> 
-                        <input ref={inputRef} className='modalWindow_main_head_form-input' type="text" value={input_val} onChange={(e)=>{   handleChange(e)}} />
+                        <input placeholder={"write here"} ref={inputRef} className='modalWindow_main_head_form-input' type="text" value={input_val} onChange={(e)=>{   handleChange(e)}} />
                         <input className='modalWindow_main_head_form-submit'  type="submit" value="🔎" />
                         {/* <button onClick={(e)=>{console.log(`>>>${   state.input_val.toUpperCase()}`); e.preventDefault();}}>cock</button> */}
                     </form>

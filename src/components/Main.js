@@ -1,7 +1,8 @@
 import React, { Component, useState, useEffect} from 'react'
 import '../index.css'
 
-import {test, getFirebase, getStudents, writeWeekFirebase, getWeekFirebase} from './firebase_fetch.js'
+import {test, getFirebase, getStudents, writeWeekFirebase, getWeekFirebase} from './firebase_fetch.js' // script that manage actions with firebase
+import {log} from '../LOGGER.js'
 
 
 import App_Start from './App_Start';
@@ -71,7 +72,7 @@ function Main() {
     var [isFirstVisit, setIsFirstVisit] = useState(false);
     function getIsFirstVisit() { return isFirstVisit};
 
-    //.list with groups which user select
+    //list with groups which user select
     var [selected_groups_list, setSelectedGroupsList] = useState([]);
     function getSelectedGroupsList() { return selected_groups_list};
 
@@ -154,14 +155,14 @@ function Main() {
           "all": selected_groups_list
         }
 
-        console.log(`set_localStorage> write in storage`)
+        log(`set_localStorage> write in storage`)
         localStorage.setItem('selected_groups', JSON.stringify(obj))
 
-        console.log(`set_localStorage> SUCCESSS!`)
+        log(`set_localStorage> SUCCESSS!`)
       }
       else
       {
-        console.log(`set_localStorage> FAILURE! ${current_group}`)
+        log(`set_localStorage> FAILURE! ${current_group}`)
       }
     }
 
@@ -171,7 +172,7 @@ function Main() {
 
       const d = new Date();
       let day = weekday[d.getDay()];
-      // console.log(`todays day> ${day}`)
+      // log(`todays day> ${day}`)
       setTodaysDay(day);
     }
 
@@ -203,11 +204,11 @@ function Main() {
         res = `${loc_chys_znam}.${whole_date}` // new chys/znam + current date
         localStorage.setItem(`week`, res)
 
-        console.log(`!!!!!!!!!!!! UPDATE WEEK TO ${loc_chys_znam}`)
+        log(`!!!!!!!!!!!! UPDATE WEEK TO ${loc_chys_znam}`)
 
-        console.log(`= setWeekChysZnam> ${res}`)
+        log(`= setWeekChysZnam> ${res}`)
         setChysZnam(res)
-        // writeWeekFirebase(res) // write changes in firebase
+        writeWeekFirebase(res) // write changes in firebase
       }
       else{
         if(obj_week.includes('chys')){
@@ -217,7 +218,7 @@ function Main() {
           chys_znam = 'znam'
         }
   
-        console.log(`= setWeekChysZnam> ${obj_week}`)
+        log(`= setWeekChysZnam> ${obj_week}`)
         setChysZnam(chys_znam)
       }
     }
@@ -246,13 +247,14 @@ function Main() {
           })
         }
 
-        console.log(`get_localStorage> SUCCESSS!`)
+        // log(`get_localStorage> SUCCESSS!`)
+        log(`get_localStorage> SUCCESSS!`)
       }
       else// if localStorage data NOT exist
       {
-        console.log(`get_localStorage> FAILURE!`)
+        log(`get_localStorage> FAILURE!`)
 
-        getStudents(setStudentsGroups);
+        getStudents(setStudentsGroups); // get students groups list
 
         setIsFirstVisit(true)
         setSearchModal(true)
@@ -269,16 +271,16 @@ function Main() {
     function getDataFromFirebase(p_text){
       if (p_text == current_group)
       {
-        console.log(`getDataFromFirebase> REPETITION SAME GROUP!`)
+        log(`getDataFromFirebase> REPETITION SAME GROUP!`)
       }
       else if(p_text != "")
       {   
-        getStudents(setStudentsGroups);
+        getStudents(setStudentsGroups); // get students groups list
         getFirebase(p_text, setDays_List, setWeekdays_List, setWeekdaysAdded_List);
         setCurrentGroup(p_text)
 
         if(!selected_groups_list.includes(p_text)){
-          console.log(`NOT REPEATS> ${p_text}`)
+          log(`NOT REPEATS> ${p_text}`)
           var arr = selected_groups_list;
           arr.push(p_text)
           setSelectedGroupsList(arr)
@@ -286,12 +288,12 @@ function Main() {
         }
 
 
-        // console.log(`selected list> ${p_text}`)
-        console.log(`getDataFromFirebase> SUCCESS!`)
+        // log(`selected list> ${p_text}`)
+        log(`getDataFromFirebase> SUCCESS!`)
       }
       else
       {
-        console.log(`getDataFromFirebase> FAILURE!`)
+        log(`getDataFromFirebase> FAILURE!`)
       }
     }
 
@@ -302,7 +304,7 @@ function Main() {
         return response.json();
         })
         .then(function (data) {
-            console.log("getData> reading json")
+            log("getData> reading json")
             fillDaysList(data.group)
             fillWeekdaysList(data.days)
         })
@@ -332,7 +334,7 @@ function Main() {
           {
             localStorage.removeItem('selected_groups');
             localStorage.removeItem('week');
-            console.log("> !!! LOCALSTORAGE DATA IS REMOVED !!!")
+            log("> !!! LOCALSTORAGE DATA IS REMOVED !!!")
           }}>clear localStorage</button> */}
 
           <App_Start
